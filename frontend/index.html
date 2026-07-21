@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محلل صناديق ETF</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <style>
+        :root{--bg:#0f1117;--bg2:#1a1d2e;--card:#222640;--input:#2a2e4a;--txt:#e8e8f0;--txt2:#a0a0b8;--blue:#4f8cff;--green:#34d399;--red:#f87171;--purple:#a78bfa;--orange:#fb923c;--yellow:#fbbf24;--border:#2e3350;--shadow:0 4px 24px rgba(0,0,0,.3);--r:12px}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;direction:rtl}
+        .c{max-width:1260px;margin:0 auto;padding:20px}
+        header{text-align:center;padding:32px 20px 24px}
+        header h1{font-size:2rem;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+        header p{color:var(--txt2);font-size:.95rem}
+        .tabs{display:flex;justify-content:center;gap:10px;margin-bottom:24px;flex-wrap:wrap}
+        .tb{padding:10px 22px;border:2px solid var(--border);background:var(--bg2);color:var(--txt2);border-radius:28px;font-size:.95rem;cursor:pointer;transition:.3s;font-family:inherit}
+        .tb.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+        .tb:hover:not(.on){border-color:var(--blue);color:var(--txt)}
+        .pn{display:none}.pn.on{display:block}
+        .cd{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+        .cd h2{font-size:1.2rem;margin-bottom:14px;color:var(--blue)}
+        .cd h3{font-size:1.05rem;margin-bottom:10px;color:var(--txt)}
+        .sb{display:flex;gap:10px;margin-bottom:20px}
+        .sb input{flex:1;padding:12px 16px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);font-size:.95rem;font-family:inherit;direction:ltr;text-align:left}
+        .sb input:focus{outline:none;border-color:var(--blue)}
+        .sb input::placeholder{color:var(--txt2)}
+        .btn{padding:12px 24px;background:var(--blue);color:#fff;border:none;border-radius:var(--r);font-size:.95rem;cursor:pointer;transition:.3s;font-family:inherit;font-weight:600;white-space:nowrap}
+        .btn:hover{opacity:.9;transform:translateY(-1px)}.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+        .btn-sm{padding:7px 14px;font-size:.82rem;border-radius:8px}
+        .btn-out{background:transparent;border:1px solid var(--border);color:var(--txt2)}
+        .btn-out.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+        .btn-green{background:var(--green);color:#000}.btn-red{background:var(--red)}
+        .btn-orange{background:var(--orange);color:#000}
+        .ld{text-align:center;padding:36px;color:var(--txt2)}
+        .sp{display:inline-block;width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:sp .8s linear infinite;margin-bottom:10px}
+        @keyframes sp{to{transform:rotate(360deg)}}
+        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+        .err{background:rgba(248,113,113,.1);border:1px solid var(--red);border-radius:var(--r);padding:14px 18px;color:var(--red);margin-bottom:18px;display:none}
+        .mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:18px}
+        .mc{background:var(--bg2);border-radius:10px;padding:12px;text-align:center}
+        .mc .l{font-size:.78rem;color:var(--txt2);margin-bottom:4px}.mc .v{font-size:1.1rem;font-weight:700}.mc .s{font-size:.72rem;color:var(--txt2);margin-top:3px}
+        .pos{color:var(--green)}.neg{color:var(--red)}
+        .ig{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:18px}
+        .ii{background:var(--bg2);border-radius:10px;padding:14px}.ii .l{font-size:.82rem;color:var(--txt2);margin-bottom:5px}.ii .v{font-size:1.15rem;font-weight:700}
+        table{width:100%;border-collapse:collapse;margin-top:10px}
+        th,td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--border)}
+        th{color:var(--txt2);font-weight:600;font-size:.85rem}td{font-size:.9rem}
+        tr:hover td{background:rgba(79,140,255,.05)}
+        .cr{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+        .cc{position:relative;max-height:340px}.cc-tall{position:relative;height:auto;min-height:280px}
+        .ph{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+        .pd{display:flex;align-items:baseline;gap:10px}
+        .pp{font-size:1.8rem;font-weight:800}.pc{font-size:1rem;font-weight:600}
+        .pb{display:flex;gap:6px;flex-wrap:wrap}
+        .ob{display:inline-block;font-size:2.2rem;font-weight:800;padding:14px 28px;border-radius:14px;margin-bottom:10px}
+        .ol{background:rgba(52,211,153,.15);color:var(--green)}.om{background:rgba(251,191,36,.15);color:var(--yellow)}.oh{background:rgba(248,113,113,.15);color:var(--red)}
+        .interp{font-size:1rem;color:var(--txt2);margin-top:6px;line-height:1.6}
+        .ca{color:var(--blue)}.cb{color:var(--orange)}
+        .da,.db{display:inline-block;width:11px;height:11px;border-radius:50%;margin-left:5px}
+        .da{background:var(--blue)}.db{background:var(--orange)}
+        .lr{display:flex;gap:20px;margin-bottom:14px;flex-wrap:wrap}
+        .li{display:flex;align-items:center;gap:7px;font-size:.9rem}
+        .es{text-align:center;padding:50px 18px;color:var(--txt2)}.es .ic{font-size:2.5rem;margin-bottom:10px}
+        .cmr{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+        .cmc{background:var(--bg2);border-radius:10px;padding:12px;text-align:center}
+        .cmc .l{font-size:.78rem;color:var(--txt2);margin-bottom:6px}
+        .cmc .vals{display:flex;justify-content:space-between;align-items:center}
+        .cmc .va{font-size:1rem;font-weight:700;color:var(--blue)}.cmc .vb{font-size:1rem;font-weight:700;color:var(--orange)}.cmc .vs{font-size:.72rem;color:var(--txt2)}
+        .sub-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+        .sub-tab{padding:8px 16px;border:1px solid var(--border);background:transparent;color:var(--txt2);border-radius:20px;font-size:.85rem;cursor:pointer;font-family:inherit}
+        .sub-tab.on{background:var(--purple);color:#fff;border-color:var(--purple)}
+        .sub-pn{display:none}.sub-pn.on{display:block}
+        .mv-row{display:flex;gap:18px;flex-wrap:wrap}
+        .mv-col{flex:1;min-width:280px}
+        .mv-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-bottom:1px solid var(--border);cursor:pointer;transition:.2s}
+        .mv-item:hover{background:rgba(79,140,255,.08)}
+        .mv-sym{font-weight:700;color:var(--blue);direction:ltr}.mv-name{font-size:.82rem;color:var(--txt2)}
+        .wl-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid var(--border)}
+        .wl-actions{display:flex;gap:6px}
+        .alert-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-bottom:1px solid var(--border)}
+        .news-item{padding:14px;border-bottom:1px solid var(--border);transition:.2s}
+        .news-item:hover{background:rgba(79,140,255,.05)}
+        .news-title{font-weight:600;margin-bottom:4px;color:var(--txt)}
+        .news-meta{font-size:.8rem;color:var(--txt2)}
+        .news-summary{font-size:.85rem;color:var(--txt2);margin-top:4px;line-height:1.5}
+        .heatmap{display:grid;gap:3px;margin-top:10px}
+        .hm-cell{padding:8px;text-align:center;font-size:.8rem;font-weight:700;border-radius:4px;color:#fff}
+        .hm-header{background:var(--bg2);color:var(--txt2);font-weight:600;font-size:.75rem}
+        .desc-text{font-size:.92rem;line-height:1.8;color:var(--txt2);direction:ltr;text-align:left}
+        .div-summary{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+        .div-card{background:var(--bg2);border-radius:8px;padding:10px 16px;text-align:center}
+        .div-card .l{font-size:.75rem;color:var(--txt2)}.div-card .v{font-size:1.05rem;font-weight:700}
+        @media(max-width:768px){.cr,.cmr{grid-template-columns:1fr}.sb{flex-direction:column}header h1{font-size:1.5rem}.tabs{flex-wrap:wrap}.mv-row{flex-direction:column}}
+    </style>
+</head>
+<body>
+<div class="c">
+    <header><h1>محلل صناديق ETF</h1><p>تحليل مفصل، مقارنة، ومتابعة صناديق الاستثمار المتداولة</p></header>
+    <div class="tabs">
+        <button class="tb on" onclick="tab('analyze')">تحليل</button>
+        <button class="tb" onclick="tab('compare')">مقارنة</button>
+        <button class="tb" onclick="tab('multi')">مقارنة متعددة</button>
+        <button class="tb" onclick="tab('movers')">الأكثر حركة</button>
+        <button class="tb" onclick="tab('saudi')">الصناديق السعودية</button>
+        <button class="tb" onclick="tab('funds')">صناديق الاستثمار</button>
+        <button class="tb" onclick="tab('tools')">أدوات</button>
+    </div>
+    <div id="error" class="err"></div>
+
+    <div id="pn-analyze" class="pn on">
+        <div class="cd"><div class="sb">
+            <input id="inp" placeholder="أدخل رمز الصندوق (مثال: VOO, SPY, QQQ)" onkeydown="if(event.key==='Enter')analyze()">
+            <button class="btn" id="btn-an" onclick="analyze()">تحليل</button>
+        </div></div>
+        <div id="res-an"></div>
+    </div>
+
+    <div id="pn-compare" class="pn">
+        <div class="cd"><div class="sb">
+            <input id="inp-a" placeholder="الصندوق الأول (مثال: VOO)" onkeydown="if(event.key==='Enter')compare()">
+            <input id="inp-b" placeholder="الصندوق الثاني (مثال: VGT)" onkeydown="if(event.key==='Enter')compare()">
+            <button class="btn" id="btn-cm" onclick="compare()">مقارنة</button>
+        </div></div>
+        <div id="res-cm"></div>
+    </div>
+
+    <div id="pn-multi" class="pn">
+        <div class="cd">
+            <h2>مقارنة متعددة (2-5 صناديق)</h2>
+            <div class="sb">
+                <input id="inp-multi" placeholder="أدخل الرموز مفصولة بفاصلة: VOO,QQQ,VGT,SOXX" onkeydown="if(event.key==='Enter')multiCompare()">
+                <button class="btn" onclick="multiCompare()">مقارنة</button>
+            </div>
+        </div>
+        <div id="res-multi"></div>
+    </div>
+
+    <div id="pn-movers" class="pn">
+        <div id="res-movers"><div class="ld"><div class="sp"></div><br>جاري التحميل...</div></div>
+    </div>
+
+    <div id="pn-saudi" class="pn">
+        <div class="cd">
+            <h2>الصناديق السعودية</h2>
+            <div class="sub-tabs">
+                <button class="sub-tab on" onclick="saudiSubtab('list')">قائمة الصناديق</button>
+                <button class="sub-tab" onclick="saudiSubtab('analyze')">تحليل صندوق</button>
+                <button class="sub-tab" onclick="saudiSubtab('compare')">مقارنة</button>
+            </div>
+        </div>
+
+        <div id="saudi-list" class="sub-pn on">
+            <div class="cd">
+                <h2>صناديق ETF المتاحة في السوق السعودي</h2>
+                <div id="saudi-etf-list"><div class="ld"><div class="sp"></div></div></div>
+            </div>
+        </div>
+
+        <div id="saudi-analyze" class="sub-pn">
+            <div class="cd">
+                <h2>تحليل صندوق سعودي</h2>
+                <div class="sb">
+                    <input id="saudi-sym" list="saudi-etf-options" placeholder="اكتب الرمز (مثال: 9400)" style="flex:1;padding:12px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);font-family:inherit;direction:ltr;text-align:left" onkeydown="if(event.key==='Enter')analyzeSaudi()">
+                    <datalist id="saudi-etf-options"></datalist>
+                    <button class="btn" onclick="analyzeSaudi()">تحليل</button>
+                </div>
+                <p style="color:var(--txt2);font-size:.82rem;margin-top:8px">صناديق متاحة: 9400, 9401, 9402, 9403, 9404, 9405, 9406, 9407, 9408, 9409, 9410, 9411, 9412</p>
+            </div>
+            <div id="saudi-res"></div>
+        </div>
+
+        <div id="saudi-compare" class="sub-pn">
+            <div class="cd">
+                <h2>مقارنة صناديق سعودية</h2>
+                <div class="sb">
+                    <input id="saudi-sym-a" list="saudi-etf-options" placeholder="الصندوق الأول (9400)" style="flex:1;padding:12px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);font-family:inherit;direction:ltr;text-align:left" onkeydown="if(event.key==='Enter')compareSaudi()">
+                    <input id="saudi-sym-b" list="saudi-etf-options" placeholder="الصندوق الثاني (9401)" style="flex:1;padding:12px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);font-family:inherit;direction:ltr;text-align:left" onkeydown="if(event.key==='Enter')compareSaudi()">
+                    <button class="btn" onclick="compareSaudi()">مقارنة</button>
+                </div>
+            </div>
+            <div id="saudi-cmp-res"></div>
+        </div>
+    </div>
+
+    <div id="pn-funds" class="pn">
+        <div class="sub-tabs">
+            <button class="sub-tab on" onclick="fundsSubtab('list')">قائمة الصناديق</button>
+            <button class="sub-tab" onclick="fundsSubtab('analyze')">تحليل صندوق</button>
+            <button class="sub-tab" onclick="fundsSubtab('stats')">إحصائيات</button>
+        </div>
+
+        <div id="funds-list" class="sub-pn on">
+            <div class="cd">
+                <h2>صناديق الاستثمار العامة <span id="funds-count" style="color:var(--txt2);font-size:.85rem"></span></h2>
+                <div class="sb" style="flex-wrap:wrap;gap:8px">
+                    <input id="funds-search" placeholder="بحث بالاسم أو الرمز..." style="flex:2;min-width:200px" onkeydown="if(event.key==='Enter')searchFunds()">
+                    <select id="funds-currency" style="flex:1;min-width:120px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);padding:10px">
+                        <option value="">جميع العملات</option>
+                    </select>
+                    <select id="funds-objective" style="flex:1;min-width:120px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);padding:10px">
+                        <option value="">جميع الأهداف</option>
+                    </select>
+                    <select id="funds-sort" style="flex:1;min-width:120px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);padding:10px">
+                        <option value="nav-desc">الأكبر أصولاً ↓</option>
+                        <option value="nav-asc">الأصغر أصولاً ↑</option>
+                        <option value="ytd-desc">الأعلى أداء ↓</option>
+                        <option value="ytd-asc">الأدنى أداء ↑</option>
+                        <option value="name-asc">الاسم (أ-ي)</option>
+                    </select>
+                    <button class="btn" onclick="searchFunds()">بحث</button>
+                </div>
+            </div>
+            <div id="funds-table-wrap" style="overflow-x:auto"></div>
+            <div id="funds-pagination" style="display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap"></div>
+        </div>
+
+        <div id="funds-analyze" class="sub-pn">
+            <div class="cd">
+                <h2>تحليل صندوق استثماري</h2>
+                <div class="sb">
+                    <input id="funds-analyze-sym" list="funds-options" placeholder="اكتب رمز الصندوق (مثال: 009003)" style="flex:1" onkeydown="if(event.key==='Enter')analyzeFund()">
+                    <datalist id="funds-options"></datalist>
+                    <button class="btn" onclick="analyzeFund()">تحليل</button>
+                </div>
+            </div>
+            <div id="funds-analyze-res"></div>
+        </div>
+
+        <div id="funds-stats" class="sub-pn">
+            <div class="cd">
+                <h2>إحصائيات صناديق الاستثمار</h2>
+                <div id="funds-stats-content"><div class="ld"><div class="sp"></div></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pn-tools" class="pn">
+        <div class="sub-tabs">
+            <button class="sub-tab on" onclick="subtab('watchlist')">قائمة المتابعة</button>
+            <button class="sub-tab" onclick="subtab('portfolio')">بناء المحفظة</button>
+            <button class="sub-tab" onclick="subtab('alerts')">التنبيهات</button>
+        </div>
+        <div id="sub-watchlist" class="sub-pn on">
+            <div class="cd">
+                <h2>قائمة المتابعة</h2>
+                <div class="sb">
+                    <input id="inp-wl" placeholder="مثال: VOO" style="direction:ltr;text-align:left" onkeydown="if(event.key==='Enter')addToWatchlist()">
+                    <button class="btn btn-green" onclick="addToWatchlist()">إضافة</button>
+                </div>
+                <div id="wl-list"></div>
+            </div>
+        </div>
+        <div id="sub-portfolio" class="sub-pn">
+            <div class="cd">
+                <h2>بناء محفظة وهمية</h2>
+                <div class="sb">
+                    <input id="inp-pf-sym" placeholder="الرمز (VOO)" style="flex:.4;direction:ltr;text-align:left">
+                    <input id="inp-pf-sh" placeholder="العدد" type="number" style="flex:.25">
+                    <input id="inp-pf-avg" placeholder="متوسط السعر" type="number" style="flex:.3;direction:ltr;text-align:left">
+                    <button class="btn btn-green" onclick="addToPortfolio()">إضافة</button>
+                </div>
+                <div id="pf-items"></div>
+                <div id="pf-total" style="margin-top:14px"></div>
+                <button class="btn btn-orange" style="margin-top:12px" onclick="savePortfolio()">حفظ المحفظة</button>
+            </div>
+            <div id="pf-saved"></div>
+        </div>
+        <div id="sub-alerts" class="sub-pn">
+            <div class="cd">
+                <h2>تنبيهات السعر</h2>
+                <div class="sb">
+                    <input id="inp-al-sym" placeholder="الرمز" style="flex:.3;direction:ltr;text-align:left">
+                    <input id="inp-al-price" placeholder="السعر" type="number" style="flex:.3">
+                    <select id="inp-al-dir" style="flex:.2;padding:12px;background:var(--input);border:2px solid var(--border);border-radius:var(--r);color:var(--txt);font-family:inherit">
+                        <option value="above">فوق</option>
+                        <option value="below">تحت</option>
+                    </select>
+                    <button class="btn btn-green" onclick="addAlert()">إضافة</button>
+                </div>
+                <div id="al-status" style="margin-bottom:12px"></div>
+                <div id="al-triggered" style="margin-bottom:12px"></div>
+                <div id="al-list"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let charts={};
+const COLORS=['#4f8cff','#34d399','#a78bfa','#fb923c','#f87171','#fbbf24','#38bdf8','#e879f9','#2dd4bf','#f472b6','#818cf8','#a3e635'];
+
+function tab(t){document.querySelectorAll('.tb').forEach((b,i)=>{b.classList.toggle('on',['analyze','compare','multi','movers','saudi','funds','tools'][i]===t)});document.querySelectorAll('.pn').forEach(p=>p.classList.remove('on'));document.getElementById('pn-'+t).classList.add('on');hideErr();if(t==='movers')loadMovers();if(t==='saudi')loadSaudiList();if(t==='funds')searchFunds();if(t==='tools')loadWatchlist()}
+function subtab(t){document.querySelectorAll('.sub-tab').forEach((b,i)=>{b.classList.toggle('on',['watchlist','portfolio','alerts'][i]===t)});document.querySelectorAll('.sub-pn').forEach(p=>p.classList.remove('on'));document.getElementById('sub-'+t).classList.add('on');if(t==='watchlist')loadWatchlist();if(t==='portfolio'){pfLoad();renderPfItems()}if(t==='alerts')loadAlerts()}
+function showErr(m){const e=document.getElementById('error');e.textContent=m;e.style.display='block'}
+function hideErr(){document.getElementById('error').style.display='none'}
+function fmtN(n){if(n==null)return'-';if(n>=1e12)return(n/1e12).toFixed(2)+' تريليون';if(n>=1e9)return(n/1e9).toFixed(2)+' مليار';if(n>=1e6)return(n/1e6).toFixed(2)+' مليون';if(n>=1e3)return(n/1e3).toFixed(1)+' ألف';return n.toLocaleString('ar-SA')}
+function fmtV(n){if(n==null)return'-';if(n>=1e6)return(n/1e6).toFixed(2)+'M';if(n>=1e3)return(n/1e3).toFixed(1)+'K';return n.toString()}
+function fmtD(ts){if(!ts)return'-';return new Date(ts*1000).toLocaleDateString('ar-SA',{year:'numeric',month:'long',day:'numeric'})}
+function fmtP(v){if(v==null)return'-';return v.toFixed(2)+'%'}
+function fmtPr(v){if(v==null)return'-';return'$'+v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function pC(v){return v==null?'':v>=0?'pos':'neg'}
+function pS(v){return v==null?'':v>=0?'+':''}
+
+function destroyChart(k){if(charts[k]){charts[k].destroy();charts[k]=null}}
+
+async function analyze(){
+    const sym=document.getElementById('inp').value.trim().toUpperCase();
+    if(!sym){showErr('أدخل رمز الصندوق.');return}
+    hideErr();
+    const r=document.getElementById('res-an');
+    r.innerHTML='<div class="ld"><div class="sp"></div><br>جاري التحميل...</div>';
+    document.getElementById('btn-an').disabled=true;
+    try{
+        const[d,h]=await Promise.all([fetch('/api/etf/'+sym),fetch('/api/history/'+sym+'?period=1y')]);
+        if(!d.ok){const e=await d.json();throw new Error(e.detail||'خطأ')}
+        const data=await d.json();const hist=await h.json();
+        renderAnalysis(data,hist,r);
+    }catch(e){showErr(e.message);r.innerHTML=''}finally{document.getElementById('btn-an').disabled=false}
+}
+
+async function loadExtra(sym,type){
+    const r=await fetch(`/api/${type}/${sym}`);
+    if(!r.ok)return null;return r.json();
+}
+
+function renderAnalysis(data,hist,container){
+    const{info,metrics,holdings,sectors,asset_allocation:assets,prepost,description:desc}=data;
+    const m=metrics||{};const pp=prepost||{};const h=hist?.data||[];
+    let html='';
+
+    // Price + Pre/Post
+    html+=`<div class="cd">
+        <div class="ph"><div>
+            <h2 style="margin-bottom:6px">${info.name} (${info.symbol})</h2>
+            <div class="pd">
+                <span class="pp">${fmtPr(m.current_price)}</span>
+                <span class="pc ${pC(m.day_change)}">${pS(m.day_change)}${fmtPr(m.day_change)} (${pS(m.day_change_pct)}${m.day_change_pct?.toFixed(2)||'-'})</span>
+            </div>
+            ${pp.pre_market_price?`<div style="margin-top:6px;font-size:.85rem;color:var(--txt2)">Pre-Market: <b>${fmtPr(pp.pre_market_price)}</b> <span class="${pC(pp.pre_market_change)}">${pS(pp.pre_market_change)}${fmtP(pp.pre_market_change_pct)}</span></div>`:''}
+        </div>
+        <div class="pb">
+            <button class="btn btn-sm btn-out" onclick="chgP('${info.symbol}','1mo',this)">1M</button>
+            <button class="btn btn-sm btn-out" onclick="chgP('${info.symbol}','3mo',this)">3M</button>
+            <button class="btn btn-sm btn-out" onclick="chgP('${info.symbol}','6mo',this)">6M</button>
+            <button class="btn btn-sm btn-out on" onclick="chgP('${info.symbol}','1y',this)">1Y</button>
+            <button class="btn btn-sm btn-out" onclick="chgP('${info.symbol}','2y',this)">2Y</button>
+            <button class="btn btn-sm btn-out" onclick="chgP('${info.symbol}','5y',this)">5Y</button>
+        </div></div>
+        <div style="max-height:380px;position:relative"><canvas id="ch-price"></canvas></div>
+    </div>`;
+
+    // Key Metrics
+    html+=`<div class="cd"><h2>المؤشرات الرئيسية</h2><div class="mg">
+        <div class="mc"><div class="l">حجم التداول</div><div class="v">${fmtV(m.volume)}</div><div class="s">المتوسط: ${fmtV(m.avg_volume)}</div></div>
+        <div class="mc"><div class="l">مكرر الربحية P/E</div><div class="v">${m.trailing_pe||'-'}</div></div>
+        <div class="mc"><div class="l">السعر/الدفترية P/B</div><div class="v">${m.price_to_book||'-'}</div></div>
+        <div class="mc"><div class="l">نسبة المصاريف</div><div class="v">${fmtP(m.expense_ratio)}</div></div>
+        <div class="mc"><div class="l">عائد التوزيعات</div><div class="v">${fmtP(m.dividend_yield)}</div></div>
+        <div class="mc"><div class="l">YTD</div><div class="v ${pC(m.ytd_return)}">${pS(m.ytd_return)}${fmtP(m.ytd_return)}</div></div>
+        <div class="mc"><div class="l">3 سنوات</div><div class="v ${pC(m.three_year_return)}">${pS(m.three_year_return)}${fmtP(m.three_year_return)}</div></div>
+        <div class="mc"><div class="l">5 سنوات</div><div class="v ${pC(m.five_year_return)}">${pS(m.five_year_return)}${fmtP(m.five_year_return)}</div></div>
+        <div class="mc"><div class="l">أعلى 52 أسبوع</div><div class="v">${fmtPr(m.week52_high)}</div></div>
+        <div class="mc"><div class="l">أدنى 52 أسبوع</div><div class="v">${fmtPr(m.week52_low)}</div></div>
+        <div class="mc"><div class="l">MA50</div><div class="v">${fmtPr(m.ma50)}</div></div>
+        <div class="mc"><div class="l">MA200</div><div class="v">${fmtPr(m.ma200)}</div></div>
+        <div class="mc"><div class="l">بيتا</div><div class="v">${m.beta||'-'}</div></div>
+        <div class="mc"><div class="l">NAV</div><div class="v">${fmtPr(m.nav)}</div></div>
+    </div></div>`;
+
+    // Fund Info + Description
+    html+=`<div class="cd"><h2>معلومات الصندوق</h2><div class="ig">
+        <div class="ii"><div class="l">الشركة</div><div class="v">${info.provider||'-'}</div></div>
+        <div class="ii"><div class="l">الفئة</div><div class="v">${info.category||'-'}</div></div>
+        <div class="ii"><div class="l">الأصول</div><div class="v">${fmtN(info.aum)}</div></div>
+        <div class="ii"><div class="l">التأسيس</div><div class="v">${fmtD(info.inception_date)}</div></div>
+    </div>
+    ${desc?.description?`<h3 style="margin-top:14px">وصف الصندوق</h3><p class="desc-text">${desc.description}</p>`:''}
+    </div>`;
+
+    // Holdings Table + Chart
+    if(holdings.length){
+        html+=`<div class="cd"><h2>أعلى ${holdings.length} مراكز</h2>
+        <table><thead><tr><th>#</th><th>الرمز</th><th>الاسم</th><th>النسبة</th></tr></thead><tbody>`;
+        holdings.forEach((h,i)=>{html+=`<tr><td>${i+1}</td><td style="direction:ltr;text-align:left;font-weight:700;color:var(--blue)">${h.symbol}</td><td>${h.name}</td><td>${h.weight.toFixed(2)}%</td></tr>`});
+        html+='</tbody></table></div>';
+        const ch=Math.max(280,holdings.length*26);
+        html+=`<div class="cd"><h2>توزيع المراكز</h2><div class="cc"><canvas id="ch-hold"></canvas></div></div>`;
+    }
+
+    // Sector + Asset charts
+    const hasS=Object.keys(sectors).length>0,hasA=Object.keys(assets).length>0;
+    if(hasS||hasA){
+        const sH=Math.max(260,Object.keys(sectors).length*26);
+        html+='<div class="cd"><div class="cr">';
+        if(hasS)html+=`<div><h3>القطاعات</h3><div style="height:${sH}px"><canvas id="ch-sec"></canvas></div></div>`;
+        if(hasA)html+=`<div><h3>توزيع الأصول</h3><div class="cc"><canvas id="ch-ast"></canvas></div></div>`;
+        html+='</div></div>';
+    }
+
+    // Technical Indicators (lazy load)
+    html+=`<div class="cd" id="tech-section">
+        <h2>المؤشرات الفنية</h2>
+        <div class="pb" style="margin-bottom:14px">
+            <button class="btn btn-sm btn-out" onclick="loadTech('${info.symbol}','6mo',this)">6M</button>
+            <button class="btn btn-sm btn-out on" onclick="loadTech('${info.symbol}','1y',this)">1Y</button>
+            <button class="btn btn-sm btn-out" onclick="loadTech('${info.symbol}','2y',this)">2Y</button>
+        </div>
+        <div id="tech-content"><div class="ld"><div class="sp"></div></div></div>
+    </div>`;
+
+    // Risk Metrics (lazy load)
+    html+=`<div class="cd" id="risk-section"><h2>مؤشرات المخاطر</h2><div id="risk-content"><div class="ld"><div class="sp"></div></div></div></div>`;
+
+    // Dividends (lazy load)
+    html+=`<div class="cd" id="div-section"><h2>التوزيعات</h2><div id="div-content"><div class="ld"><div class="sp"></div></div></div></div>`;
+
+    // News (lazy load)
+    html+=`<div class="cd" id="news-section"><h2>الأخبار</h2><div id="news-content"><div class="ld"><div class="sp"></div></div></div></div>`;
+
+    // Action buttons
+    html+=`<div class="cd" style="text-align:center">
+        <button class="btn btn-green" onclick="addToWatchlistDirect('${info.symbol}')">إضافة للمتابعة</button>
+        <button class="btn btn-orange" style="margin-right:8px" onclick="window.print()">طباعة التقرير</button>
+    </div>`;
+
+    container.innerHTML=html;
+
+    // Render charts
+    if(h.length)renderPrice('ch-price',h,info.symbol);
+    if(holdings.length){
+        try{
+            const labels=holdings.map(h=>h.symbol);
+            const data=holdings.map(h=>h.weight);
+            const names=holdings.map(h=>h.name);
+            const PALETTE=[
+                '#FF4D6A','#FF8C42','#FFD166','#06D6A0','#118AB2',
+                '#7B2FF7','#F72585','#4CC9F0','#F15BB5','#00F5D4',
+                '#FB5607','#FF006E','#8338EC','#3A86FF','#FFBE0B',
+                '#FF595E','#FFCA3C','#8AC926','#1982C4','#6A4C93',
+                '#E63946','#457B9D','#2A9D8F','#E9C46A','#F4A261'
+            ];
+            const colors=data.map((_,i)=>PALETTE[i%PALETTE.length]);
+            const holdCanvas=document.getElementById('ch-hold');
+            if(holdCanvas){
+                holdCanvas.parentElement.style.height='420px';
+                holdCanvas.parentElement.style.maxHeight='420px';
+                destroyChart('hold');
+                const fullLabels=labels.map((l,i)=>l+'  '+data[i].toFixed(2)+'%');
+                charts.hold=new Chart(holdCanvas.getContext('2d'),{type:'doughnut',data:{labels:fullLabels,datasets:[{data,backgroundColor:colors,borderColor:'#222640',borderWidth:2,hoverBorderColor:'#fff',hoverBorderWidth:3}]},options:{responsive:true,maintainAspectRatio:false,cutout:'40%',layout:{padding:10},plugins:{legend:{position:'right',labels:{color:'#ffffff',padding:6,font:{size:12,weight:'700'},usePointStyle:true,pointStyle:'rectRounded',boxWidth:14,boxHeight:14}},tooltip:{backgroundColor:'#1a1d2e',titleColor:'#fff',bodyColor:'#e8e8f0',borderColor:'#2e3350',borderWidth:1,padding:14,cornerRadius:10,callbacks:{title:c=>labels[c.dataIndex],label:c=>'  '+names[c.dataIndex]+'  '+c.parsed.toFixed(2)+'%'}}}}});
+            }
+        }catch(e){console.error('Holdings chart error:',e)}
+    }
+    if(hasS){
+        try{
+            const se=Object.entries(sectors).sort((a,b)=>b[1]-a[1]);
+            const sLabels=se.map(e=>e[0]);
+            const sData=se.map(e=>e[1]);
+            const secCanvas=document.getElementById('ch-sec');
+            if(secCanvas){
+                destroyChart('sec');
+                const ctx=secCanvas.getContext('2d');
+                const gradient=ctx.createLinearGradient(0,0,secCanvas.width,0);
+                gradient.addColorStop(0,'#34d399');
+                gradient.addColorStop(1,'#4f8cff');
+                charts.sec=new Chart(ctx,{type:'bar',data:{labels:sLabels,datasets:[{data:sData,backgroundColor:gradient,borderRadius:3,borderSkipped:false,barThickness:16}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',scales:{x:{ticks:{color:'#a0a0b8',callback:v=>v+'%'},grid:{color:'rgba(255,255,255,.05)'},border:{display:false}},y:{ticks:{color:'#e8e8f0',font:{size:11}},grid:{display:false}}},plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1d2e',titleColor:'#e8e8f0',bodyColor:'#a0a0b8',borderColor:'#2e3350',borderWidth:1,padding:10,cornerRadius:8,callbacks:{label:c=>'  '+c.parsed.x.toFixed(2)+'%'}}}}});
+            }
+        }catch(e){console.error('Sector chart error:',e)}
+    }
+    if(hasA){
+        try{
+            const astCanvas=document.getElementById('ch-ast');
+            if(astCanvas){
+                destroyChart('ast');
+                charts.ast=new Chart(astCanvas.getContext('2d'),{type:'doughnut',data:{labels:Object.keys(assets),datasets:[{data:Object.values(assets),backgroundColor:COLORS.slice(0,Object.keys(assets).length),borderWidth:0}]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{position:'bottom',labels:{color:'#a0a0b8',padding:12,font:{size:11}}}}}});
+            }
+        }catch(e){console.error('Asset chart error:',e)}
+    }
+
+    // Load extras
+    loadTech(info.symbol,'1y',null);
+    loadRisk(info.symbol);
+    loadDiv(info.symbol);
+    loadNews(info.symbol);
+}
+
+async function loadTech(sym,period,btn){
+    if(btn){document.querySelectorAll('#tech-section .btn-sm').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
+    const el=document.getElementById('tech-content');if(!el)return;
+    try{
+        const r=await fetch(`/api/technical/${sym}?period=${period}`);
+        if(!r.ok){el.innerHTML='<p>لا توجد بيانات</p>';return}
+        const d=await r.json();
+        if(d.error){el.innerHTML='<p>'+d.error+'</p>';return}
+
+        let html='';
+        if(d.current_rsi!=null){
+            const rsiClass=d.current_rsi>70?'neg':d.current_rsi<30?'pos':'';
+            const rsiLabel=d.current_rsi>70?'تشبع شرائي':d.current_rsi<30?'تشبع بيعي':'محايد';
+            html+=`<div class="mg" style="margin-bottom:14px">
+                <div class="mc"><div class="l">RSI (14)</div><div class="v ${rsiClass}">${d.current_rsi}</div><div class="s">${rsiLabel}</div></div>
+            </div>`;
+        }
+        html+=`<div style="max-height:350px"><canvas id="ch-tech"></canvas></div>`;
+        el.innerHTML=html;
+
+        const techCanvas=document.getElementById('ch-tech');
+        if(techCanvas){
+            destroyChart('tech');
+            charts.tech=new Chart(techCanvas.getContext('2d'),{type:'line',data:{labels:d.dates,datasets:[
+                {label:'السعر',data:d.close,borderColor:'#4f8cff',fill:false,tension:.3,pointRadius:0,borderWidth:2},
+                {label:'SMA20',data:d.sma20,borderColor:'#34d399',fill:false,tension:.3,pointRadius:0,borderWidth:1.5,borderDash:[5,3]},
+                {label:'SMA50',data:d.sma50,borderColor:'#fb923c',fill:false,tension:.3,pointRadius:0,borderWidth:1.5,borderDash:[5,3]},
+                {label:'BB Upper',data:d.bb_upper,borderColor:'rgba(167,139,250,.4)',fill:false,tension:.3,pointRadius:0,borderWidth:1},
+                {label:'BB Lower',data:d.bb_lower,borderColor:'rgba(167,139,250,.4)',fill:'-1',backgroundColor:'rgba(167,139,250,.06)',tension:.3,pointRadius:0,borderWidth:1},
+            ]},options:{responsive:true,maintainAspectRatio:true,scales:{x:{ticks:{color:'#a0a0b8',maxTicksLimit:8,maxRotation:0},grid:{display:false}},y:{ticks:{color:'#a0a0b8',callback:v=>'$'+v},grid:{color:'rgba(255,255,255,.05)'}}},plugins:{legend:{labels:{color:'#a0a0b8',padding:12,font:{size:11}}},tooltip:{callbacks:{label:c=>c.dataset.label+': $'+c.parsed.y.toFixed(2)}}},interaction:{intersect:false,mode:'index'}}});
+        }
+    }catch(e){console.error('Tech chart error:',e);el.innerHTML='<p>خطأ في تحميل البيانات</p>'}
+}
+
+async function loadRisk(sym){
+    const el=document.getElementById('risk-content');if(!el)return;
+    const r=await fetch(`/api/risk/${sym}?period=3y`);
+    if(!r.ok){el.innerHTML='<p>لا توجد بيانات</p>';return}
+    const d=await r.json();
+    el.innerHTML=`<div class="mg">
+        <div class="mc"><div class="l">التذبذب السنوي</div><div class="v">${fmtP(d.volatility)}</div></div>
+        <div class="mc"><div class="l">العائد السنوي</div><div class="v ${pC(d.annualized_return)}">${pS(d.annualized_return)}${fmtP(d.annualized_return)}</div></div>
+        <div class="mc"><div class="l">Sharpe Ratio</div><div class="v">${d.sharpe_ratio}</div></div>
+        <div class="mc"><div class="l">Sortino Ratio</div><div class="v">${d.sortino_ratio}</div></div>
+        <div class="mc"><div class="l">أقصى انخفاض</div><div class="v neg">-${fmtP(d.max_drawdown)}</div></div>
+        <div class="mc"><div class="l">الانخفاض الحالي</div><div class="v neg">-${fmtP(d.current_drawdown)}</div></div>
+        <div class="mc"><div class="l">العائد الكلي (3 سنوات)</div><div class="v ${pC(d.total_return)}">${pS(d.total_return)}${fmtP(d.total_return)}</div></div>
+    </div>`;
+}
+
+async function loadDiv(sym){
+    const el=document.getElementById('div-content');if(!el)return;
+    const r=await fetch(`/api/dividends/${sym}`);
+    if(!r.ok){el.innerHTML='<p>لا توجد بيانات</p>';return}
+    const d=await r.json();
+    const divs=d.dividends||[];
+    if(!divs.length){el.innerHTML='<p>لا توجد توزيعات</p>';return}
+    const totalYear=divs.filter(x=>x.date>=new Date().getFullYear()+'-01-01').reduce((s,x)=>s+x.amount,0);
+    const totalAll=divs.reduce((s,x)=>s+x.amount,0);
+    let html=`<div class="div-summary">
+        <div class="div-card"><div class="l">إجمالي هذا العام</div><div class="v">$${totalYear.toFixed(4)}</div></div>
+        <div class="div-card"><div class="l">عدد التوزيعات</div><div class="v">${divs.length}</div></div>
+    </div>`;
+    html+='<div style="max-height:300px;overflow-y:auto"><table><thead><tr><th>التاريخ</th><th>المبلغ</th></tr></thead><tbody>';
+    divs.slice(0,20).forEach(d=>{html+=`<tr><td>${d.date}</td><td>$${d.amount.toFixed(4)}</td></tr>`});
+    html+='</tbody></table></div>';
+    el.innerHTML=html;
+}
+
+async function loadNews(sym){
+    const el=document.getElementById('news-content');if(!el)return;
+    const r=await fetch(`/api/news/${sym}`);
+    if(!r.ok){el.innerHTML='<p>لا توجد أخبار</p>';return}
+    const d=await r.json();
+    const news=d.news||[];
+    if(!news.length){el.innerHTML='<p>لا توجد أخبار حالياً</p>';return}
+    let html='';
+    news.forEach(n=>{
+        html+=`<div class="news-item" ${n.url?`onclick="window.open('${n.url}','_blank')" style="cursor:pointer"`:''}>
+            <div class="news-title">${n.title}</div>
+            <div class="news-meta">${n.publisher} ${n.published?'• '+new Date(n.published).toLocaleDateString('ar-SA'):''}</div>
+            ${n.summary?`<div class="news-summary">${n.summary.substring(0,200)}${n.summary.length>200?'...':''}</div>`:''}
+        </div>`;
+    });
+    el.innerHTML=html;
+}
+
+function renderPrice(id,data,sym){
+    destroyChart('price');
+    const canvas=document.getElementById(id);
+    if(!canvas){console.error('Canvas not found:',id);return}
+    const ctx=canvas.getContext('2d');
+    if(!ctx){console.error('Cannot get context');return}
+    if(!data||!data.length){console.error('No data');return}
+
+    const prices=data.map(d=>d.close);
+    const isUp=prices[prices.length-1]>=prices[0];
+    const lineColor=isUp?'#34d399':'#f87171';
+    const fillColor=isUp?'rgba(52,211,153,.1)':'rgba(248,113,113,.1)';
+
+    try{
+        charts.price=new Chart(ctx,{type:'line',data:{labels:data.map(d=>d.date),datasets:[{label:sym,data:prices,borderColor:lineColor,backgroundColor:fillColor,fill:true,tension:.3,pointRadius:0,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:true,animation:{duration:600},scales:{x:{ticks:{color:'#a0a0b8',maxTicksLimit:8,maxRotation:0,autoSkip:true},grid:{display:false}},y:{ticks:{color:'#a0a0b8',callback:v=>'$'+v},grid:{color:'rgba(255,255,255,.05)'}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'$'+c.parsed.y.toFixed(2)}}},interaction:{intersect:false,mode:'index'}}});
+    }catch(e){console.error('Chart error:',e)}
+}
+
+async function chgP(sym,p,btn){
+    document.querySelectorAll('.pb .btn-sm').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    try{
+        const r=await fetch(`/api/history/${sym}?period=${p}`);
+        if(r.ok){
+            const d=await r.json();
+            if(d.data&&d.data.length>0){
+                renderPrice('ch-price',d.data,sym);
+            }else{
+                console.error('No data in response');
+            }
+        }else{
+            console.error('Fetch error:',r.status);
+        }
+    }catch(e){console.error('chgP error:',e)}
+}
+
+async function compare(){
+    const a=document.getElementById('inp-a').value.trim().toUpperCase();
+    const b=document.getElementById('inp-b').value.trim().toUpperCase();
+    if(!a||!b){showErr('أدخل رمزين.');return}
+    if(a===b){showErr('أدخل رمزين مختلفين.');return}
+    hideErr();
+    const r=document.getElementById('res-cm');
+    r.innerHTML='<div class="ld"><div class="sp"></div><br>جاري التحميل...</div>';
+    document.getElementById('btn-cm').disabled=true;
+    try{
+        const res=await fetch('/api/compare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol_a:a,symbol_b:b})});
+        if(!res.ok){
+            const errData=await res.json();
+            throw new Error(errData.detail||'خطأ في الخادم');
+        }
+        const data=await res.json();
+        renderCompare(data,r);
+    }catch(e){
+        console.error('Compare error:',e);
+        showErr(e.message||'حدث خطأ غير متوقع');
+        r.innerHTML='';
+    }finally{
+        document.getElementById('btn-cm').disabled=false;
+    }
+}
+
+function renderCompare(data,container){
+    try{
+        const{etf_a:a,etf_b:b,overlap:ov}=data;
+        if(!a||!b||!ov){throw new Error('بيانات غير مكتملة')}
+        const mA=a.metrics||{};const mB=b.metrics||{};
+        const rA=a.risk||{};const rB=b.risk||{};
+        let bc='ol';if(ov.overlap_percentage>=50)bc='oh';else if(ov.overlap_percentage>=20)bc='om';
+        let html=`<div class="cd" style="text-align:center">
+            <h2>التداخل: ${a.info?.symbol||'A'} vs ${b.info?.symbol||'B'}</h2>
+            <div class="ob ${bc}">${(ov.overlap_percentage||0).toFixed(1)}%</div>
+            <p class="interp">${ov.interpretation||''}</p>
+            <p style="color:var(--txt2);margin-top:6px;font-size:.85rem">${ov.shared_count||0} أسهم مشتركة من ${ov.holdings_count_a||0}+${ov.holdings_count_b||0}</p>
+        </div>`;
+
+        function cm(l,va,vb,f=v=>v){return`<div class="cmc"><div class="l">${l}</div><div class="vals"><span class="va">${f(va)}</span><span class="vs">𝕏</span><span class="vb">${f(vb)}</span></div></div>`}
+        html+=`<div class="cd"><h2>مقارنة المؤشرات</h2><div class="lr"><div class="li"><span class="da"></span>${a.info?.symbol||'A'}</div><div class="li"><span class="db"></span>${b.info?.symbol||'B'}</div></div>
+        <div class="cmr" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+            ${cm('السعر',mA.current_price,mB.current_price,fmtPr)}${cm('P/E',mA.trailing_pe,mB.trailing_pe)}${cm('P/B',mA.price_to_book,mB.price_to_book)}
+            ${cm('المصاريف',mA.expense_ratio,mB.expense_ratio,fmtP)}${cm('التوزيعات',mA.dividend_yield,mB.dividend_yield,fmtP)}
+            ${cm('YTD',mA.ytd_return,mB.ytd_return,v=>pS(v)+fmtP(v))}${cm('3 سنوات',mA.three_year_return,mB.three_year_return,v=>pS(v)+fmtP(v))}
+            ${cm('5 سنوات',mA.five_year_return,mB.five_year_return,v=>pS(v)+fmtP(v))}${cm('التداول',mA.volume,mB.volume,fmtV)}
+            ${cm('بيتا',mA.beta,mB.beta)}${cm('Sharpe',rA.sharpe_ratio,rB.sharpe_ratio)}${cm('أقصى انخفاض',rA.max_drawdown,rB.max_drawdown,v=>v!=null?'-'+fmtP(v):'-')}
+        </div></div>`;
+
+        const shared=ov.shared_holdings||[];
+        if(shared.length){
+            html+=`<div class="cd"><h2>الأسهم المشتركة</h2><table><thead><tr><th>#</th><th>الرمز</th><th>الاسم</th><th class="ca">${a.info?.symbol||'A'}</th><th class="cb">${b.info?.symbol||'B'}</th><th>المساهمة</th></tr></thead><tbody>`;
+            shared.forEach((h,i)=>{html+=`<tr><td>${i+1}</td><td style="direction:ltr;text-align:left;font-weight:700;color:var(--blue)">${h.symbol||''}</td><td>${h.name||''}</td><td>${(h.weight_a||0).toFixed(2)}%</td><td>${(h.weight_b||0).toFixed(2)}%</td><td style="font-weight:700">${(h.contribution||0).toFixed(2)}%</td></tr>`});
+            html+='</tbody></table></div>';
+            html+=`<div class="cd"><h2>مخطط مقارن</h2><div style="max-height:400px"><canvas id="ch-ov"></canvas></div></div>`;
+        }else{html+=`<div class="cd"><div class="es"><div class="ic">⚠</div><p>لا توجد أسهم مشتركة — تداخل 0%</p></div></div>`}
+
+        container.innerHTML=html;
+
+        if(shared.length){
+            try{
+                const ovCanvas=document.getElementById('ch-ov');
+                if(ovCanvas){
+                    destroyChart('ov');
+                    charts.ov=new Chart(ovCanvas.getContext('2d'),{type:'bar',data:{labels:shared.map(h=>h.symbol),datasets:[{label:a.info?.symbol||'A',data:shared.map(h=>h.weight_a),backgroundColor:'rgba(79,140,255,.7)',borderRadius:6},{label:b.info?.symbol||'B',data:shared.map(h=>h.weight_b),backgroundColor:'rgba(251,146,60,.7)',borderRadius:6}]},options:{responsive:true,maintainAspectRatio:true,indexAxis:'y',scales:{x:{ticks:{color:'#a0a0b8',callback:v=>v+'%'},grid:{color:'rgba(255,255,255,.05)'}},y:{ticks:{color:'#e8e8f0',font:{weight:'bold'}},grid:{display:false}}},plugins:{legend:{labels:{color:'#a0a0b8',padding:14,font:{size:12}}}}}});
+                }
+            }catch(e){console.error('Overlap chart error:',e)}
+        }
+    }catch(e){
+        console.error('renderCompare error:',e);
+        container.innerHTML='<div class="cd"><div class="es"><div class="ic">❌</div><p>حدث خطأ في عرض النتائج</p></div></div>';
+    }
+}
+
+async function multiCompare(){
+    const inp=document.getElementById('inp-multi').value;
+    const syms=inp.split(',').map(s=>s.trim().toUpperCase()).filter(s=>s);
+    if(syms.length<2){showErr('أدخل رمزين على الأقل.');return}
+    if(syms.length>5){showErr('الحد الأقصى 5 صناديق.');return}
+    hideErr();
+    const r=document.getElementById('res-multi');
+    r.innerHTML='<div class="ld"><div class="sp"></div><br>جاري التحميل...</div>';
+    try{
+        const res=await fetch('/api/multi-compare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbols:syms})});
+        if(!res.ok){
+            const errData=await res.json();
+            throw new Error(errData.detail||'خطأ في الخادم');
+        }
+        const data=await res.json();
+        renderMulti(data,r,syms);
+    }catch(e){
+        console.error('Multi-compare error:',e);
+        showErr(e.message||'حدث خطأ غير متوقع');
+        r.innerHTML='';
+    }
+}
+
+function renderMulti(data,container,syms){
+    try{
+        const{performance:perf,correlation:corr,metrics}=data;
+        let html='';
+
+        // Performance comparison chart
+        html+=`<div class="cd"><h2>مقارنة الأداء</h2><div style="max-height:400px"><canvas id="ch-perf"></canvas></div></div>`;
+
+        // Metrics table
+        html+=`<div class="cd"><h2>مقارنة المؤشرات</h2><table><thead><tr><th>المؤشر</th>`;
+        syms.forEach(s=>{html+=`<th style="color:var(--blue)">${s}</th>`});
+        html+='</tr></thead><tbody>';
+        const rows=[['السعر','current_price',fmtPr],['P/E','trailing_pe',v=>v||'-'],['P/B','price_to_book',v=>v||'-'],['المصاريف','expense_ratio',fmtP],['التوزيعات','dividend_yield',fmtP],['YTD','ytd_return',v=>pS(v)+fmtP(v)],['بيتا','beta',v=>v||'-']];
+    rows.forEach(([l,k,f])=>{html+=`<tr><td>${l}</td>`;syms.forEach(s=>{html+=`<td>${f(metrics[s]?.[k])}</td>`});html+='</tr>'});
+    html+='</tbody></table></div>';
+
+    // Correlation heatmap
+    if(corr?.correlation_matrix){
+        const cs=corr.symbols;const n=cs.length;
+        html+=`<div class="cd"><h2>مصفوفة الارتباط</h2><div class="heatmap" style="grid-template-columns:80px repeat(${n},1fr)">
+            <div class="hm-cell hm-header"></div>`;
+        cs.forEach(s=>{html+=`<div class="hm-cell hm-header">${s}</div>`});
+        cs.forEach(s1=>{
+            html+=`<div class="hm-cell hm-header">${s1}</div>`;
+            cs.forEach(s2=>{
+                const v=corr.correlation_matrix[s1][s2];
+                const hue=Math.round((1-v)*120);const sat=70;const lit=50;
+                html+=`<div class="hm-cell" style="background:hsl(${hue},${sat}%,${lit}%)">${v.toFixed(2)}</div>`;
+            });
+        });
+        html+='</div></div>';
+    }
+
+    container.innerHTML=html;
+
+    // Performance chart
+    if(perf?.data){
+        try{
+            const perfCanvas=document.getElementById('ch-perf');
+            if(perfCanvas){
+                destroyChart('perf');
+                const perfEntries=Object.entries(perf.data);
+                // Use the shortest dates array to ensure alignment
+                let minLen=Math.min(...perfEntries.map(([s,d])=>d.dates.length));
+                const datasets=perfEntries.map(([sym,d],i)=>{
+                    const data=d.returns.slice(0,minLen);
+                    return{label:sym,data,borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length]+'20',fill:false,tension:.3,pointRadius:0,borderWidth:2};
+                });
+                const dates=perfEntries[0][1].dates.slice(0,minLen);
+                charts.perf=new Chart(perfCanvas.getContext('2d'),{type:'line',data:{labels:dates,datasets},options:{responsive:true,maintainAspectRatio:true,scales:{x:{ticks:{color:'#a0a0b8',maxTicksLimit:8,maxRotation:0},grid:{display:false}},y:{ticks:{color:'#a0a0b8',callback:v=>v.toFixed(1)+'%'},grid:{color:'rgba(255,255,255,.05)'}}},plugins:{legend:{labels:{color:'#ffffff',padding:14,font:{size:12,weight:'600'}}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toFixed(2)+'%'}}},interaction:{intersect:false,mode:'index'}}});
+            }
+        }catch(e){console.error('Performance chart error:',e)}
+    }
+    }catch(e){
+        console.error('renderMulti error:',e);
+        container.innerHTML='<div class="cd"><div class="es"><div class="ic">❌</div><p>حدث خطأ في عرض النتائج</p></div></div>';
+    }
+}
+
+async function loadMovers(){
+    const el=document.getElementById('res-movers');
+    try{
+        const r=await fetch('/api/movers?limit=10');
+        if(!r.ok)throw new Error('خطأ');
+        const d=await r.json();
+        let html='<div class="mv-row">';
+        html+=`<div class="mv-col cd"><h2 style="color:var(--green)">الأكثر صعوداً</h2>`;
+        d.gainers.forEach(g=>{html+=`<div class="mv-item" onclick="document.getElementById('inp').value='${g.symbol}';tab('analyze');analyze()">
+            <div><div class="mv-sym">${g.symbol}</div><div class="mv-name">${g.name}</div></div>
+            <div style="text-align:left"><div style="font-weight:700">${fmtPr(g.price)}</div><div class="pos">+${g.change_pct.toFixed(2)}%</div></div>
+        </div>`});
+        html+='</div>';
+        html+=`<div class="mv-col cd"><h2 style="color:var(--red)">الأكثر هبوطاً</h2>`;
+        d.losers.forEach(g=>{html+=`<div class="mv-item" onclick="document.getElementById('inp').value='${g.symbol}';tab('analyze');analyze()">
+            <div><div class="mv-sym">${g.symbol}</div><div class="mv-name">${g.name}</div></div>
+            <div style="text-align:left"><div style="font-weight:700">${fmtPr(g.price)}</div><div class="neg">${g.change_pct.toFixed(2)}%</div></div>
+        </div>`});
+        html+='</div></div>';
+        el.innerHTML=html;
+    }catch(e){el.innerHTML='<p>خطأ في التحميل</p>'}
+}
+
+// Watchlist
+async function loadWatchlist(){
+    const r=await fetch('/api/watchlist');const d=await r.json();
+    const el=document.getElementById('wl-list');if(!el)return;
+    if(!d.symbols?.length){el.innerHTML='<p style="color:var(--txt2);padding:14px">القائمة فارغة</p>';return}
+    let html='';
+    for(const sym of d.symbols){
+        try{
+            const r2=await fetch(`/api/etf/${sym}`);const d2=await r2.json();
+            const m=d2.metrics||{};
+            html+=`<div class="wl-item" style="flex-direction:row-reverse">
+                <div class="wl-actions"><button class="btn btn-sm btn-red" onclick="removeFromWatchlist('${sym}')">حذف</button></div>
+                <div style="text-align:center;min-width:80px"><div style="font-weight:700">${fmtPr(m.current_price)}</div><div class="${pC(m.day_change)}">${pS(m.day_change)}${fmtP(m.day_change_pct)}</div></div>
+                <div onclick="document.getElementById('inp').value='${sym}';tab('analyze');analyze()" style="cursor:pointer;flex:1;text-align:right">
+                    <div style="font-weight:700;color:var(--blue);font-size:1.1rem">${sym}</div>
+                    <div style="font-size:.82rem;color:var(--txt2)">${d2.info?.name||sym}</div>
+                </div>
+            </div>`;
+        }catch(e){html+=`<div class="wl-item"><span>${sym}</span><button class="btn btn-sm btn-red" onclick="removeFromWatchlist('${sym}')">حذف</button></div>`}
+    }
+    el.innerHTML=html;
+}
+
+async function addToWatchlist(){
+    const sym=document.getElementById('inp-wl').value.trim().toUpperCase();
+    if(!sym)return;document.getElementById('inp-wl').value='';
+    await fetch('/api/watchlist/add',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol_a:sym,symbol_b:''})});
+    loadWatchlist();
+}
+
+async function addToWatchlistDirect(sym){
+    await fetch('/api/watchlist/add',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol_a:sym,symbol_b:''})});
+    alert('تمت الإضافة للمتابعة: '+sym);
+}
+
+async function removeFromWatchlist(sym){
+    await fetch('/api/watchlist/remove',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol_a:sym,symbol_b:''})});
+    loadWatchlist();
+}
+
+// Portfolio
+let pfItems=[];
+function pfLoad(){
+    try{
+        const saved=localStorage.getItem('etf_portfolio');
+        if(saved){pfItems=JSON.parse(saved)}
+    }catch(e){pfItems=[]}
+}
+function pfSave(){
+    try{localStorage.setItem('etf_portfolio',JSON.stringify(pfItems))}catch(e){}
+}
+function addToPortfolio(){
+    const sym=document.getElementById('inp-pf-sym').value.trim().toUpperCase();
+    const sh=parseFloat(document.getElementById('inp-pf-sh').value);
+    const avg=parseFloat(document.getElementById('inp-pf-avg').value);
+    if(!sym||!sh||sh<=0)return;
+    const existing=pfItems.find(p=>p.symbol===sym);
+    if(existing){
+        // Weighted average when adding more shares
+        const oldCost=existing.shares*existing.avgPrice;
+        const newCost=sh*(avg||existing.avgPrice);
+        existing.shares+=sh;
+        existing.avgPrice=(oldCost+newCost)/existing.shares;
+    }else{
+        pfItems.push({symbol:sym,shares:sh,avgPrice:avg||0})
+    }
+    document.getElementById('inp-pf-sym').value='';
+    document.getElementById('inp-pf-sh').value='';
+    document.getElementById('inp-pf-avg').value='';
+    pfSave();renderPfItems();
+}
+function removePfItem(i){
+    pfItems.splice(i,1);
+    pfSave();renderPfItems();
+}
+function renderPfItems(){
+    const el=document.getElementById('pf-items');if(!el)return;
+    if(!pfItems.length){el.innerHTML='<p style="color:var(--txt2)">أضف أسهم للمحفظة</p>';document.getElementById('pf-total').innerHTML='';return}
+    let html='<table><thead><tr><th>الرمز</th><th>الأسهم</th><th>متوسط السعر</th><th></th></tr></thead><tbody>';
+    pfItems.forEach((p,i)=>{
+        html+=`<tr>
+            <td style="font-weight:700;color:var(--blue)">${p.symbol}</td>
+            <td>${p.shares}</td>
+            <td>${p.avgPrice?fmtPr(p.avgPrice):'-'}</td>
+            <td><button class="btn btn-sm btn-red" onclick="removePfItem(${i})">حذف</button></td>
+        </tr>`;
+    });
+    html+='</tbody></table>';el.innerHTML=html;
+    calculatePfValue();
+}
+async function calculatePfValue(){
+    if(!pfItems.length){document.getElementById('pf-total').innerHTML='';return}
+    const el=document.getElementById('pf-total');
+    el.innerHTML='<div class="ld"><div class="sp"></div></div>';
+    try{
+        let totalValue=0,totalCost=0,totalShares=0;const details=[];
+        for(const p of pfItems){
+            try{
+                const r=await fetch(`/api/etf/${p.symbol}`);
+                if(r.ok){
+                    const d=await r.json();
+                    const currentPrice=d.metrics?.current_price||0;
+                    const value=currentPrice*p.shares;
+                    const cost=(p.avgPrice||0)*p.shares;
+                    const pl=value-cost;
+                    const plPct=cost>0?((value-cost)/cost*100):0;
+                    totalValue+=value;
+                    totalCost+=cost;
+                    totalShares+=p.shares;
+                    details.push({symbol:p.symbol,shares:p.shares,avgPrice:p.avgPrice||0,currentPrice,value,cost,pl,plPct});
+                }
+            }catch(e){}
+        }
+        const totalPL=totalValue-totalCost;
+        const totalPLPct=totalCost>0?(totalPL/totalCost*100):0;
+        const plClass=totalPL>=0?'pos':'neg';
+        let html=`<div class="cd" style="background:var(--bg2)">
+            <h3>القيمة الحالية: <b style="color:var(--green)">${fmtPr(totalValue)}</b></h3>
+            <div class="div-summary">
+                <div class="div-card"><div class="l">إجمالي التكلفة</div><div class="v">${fmtPr(totalCost)}</div></div>
+                <div class="div-card"><div class="l">الربح/الخسارة</div><div class="v ${plClass}">${pS(totalPL)}${fmtPr(totalPL)}</div></div>
+                <div class="div-card"><div class="l">نسبة الربح</div><div class="v ${plClass}">${pS(totalPLPct)}${totalPLPct.toFixed(2)}%</div></div>
+                <div class="div-card"><div class="l">عدد الأسهم</div><div class="v">${totalShares}</div></div>
+                <div class="div-card"><div class="l">عدد الصناديق</div><div class="v">${details.length}</div></div>
+            </div>`;
+        if(details.length){
+            html+='<table><thead><tr><th>الرمز</th><th>الأسهم</th><th>متوسط الشراء</th><th>السعر الحالي</th><th>التكلفة</th><th>القيمة</th><th>الربح/الخسارة</th><th>الوزن</th></tr></thead><tbody>';
+            details.forEach(x=>{
+                const weight=totalValue>0?(x.value/totalValue*100):0;
+                const xPLClass=x.pl>=0?'pos':'neg';
+                html+=`<tr>
+                    <td style="font-weight:700;color:var(--blue)">${x.symbol}</td>
+                    <td>${x.shares}</td>
+                    <td>${fmtPr(x.avgPrice)}</td>
+                    <td>${fmtPr(x.currentPrice)}</td>
+                    <td>${fmtPr(x.cost)}</td>
+                    <td>${fmtPr(x.value)}</td>
+                    <td class="${xPLClass}">${pS(x.pl)}${fmtPr(x.pl)} (${pS(x.plPct)}${x.plPct.toFixed(1)}%)</td>
+                    <td>${weight.toFixed(2)}%</td>
+                </tr>`;
+            });
+            html+='</tbody></table>';
+        }
+        html+='</div>';
+        el.innerHTML=html;
+    }catch(e){el.innerHTML='<p>خطأ في حساب القيمة</p>'}
+}
+async function savePortfolio(){
+    if(!pfItems.length){alert('أضف أسهم أولاً');return}
+    const name='محفظة '+new Date().toLocaleDateString('ar-SA');
+    const r=await fetch('/api/portfolio/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,holdings:pfItems})});
+    const d=await r.json();
+    if(d.total_value){
+        alert('تم حفظ المحفظة! القيمة: '+fmtPr(d.total_value));
+    }
+}
+
+// Alerts
+let alertCheckInterval=null;
+let triggeredAlerts=[];
+
+function initAlerts(){
+    // Request notification permission
+    if('Notification' in window && Notification.permission==='default'){
+        Notification.requestPermission();
+    }
+    // Start checking every 60 seconds
+    if(alertCheckInterval)clearInterval(alertCheckInterval);
+    alertCheckInterval=setInterval(checkAlerts,60000);
+    // Check immediately
+    setTimeout(checkAlerts,2000);
+}
+
+function playAlertSound(){
+    try{
+        const ctx=new (window.AudioContext||window.webkitAudioContext)();
+        const osc=ctx.createOscillator();
+        const gain=ctx.createGain();
+        osc.connect(gain);gain.connect(ctx.destination);
+        osc.frequency.value=800;gain.gain.value=0.3;
+        osc.start();
+        setTimeout(()=>{osc.frequency.value=1200},200);
+        setTimeout(()=>{osc.stop();ctx.close()},500);
+    }catch(e){}
+}
+
+function showNotification(title,body){
+    // Browser notification
+    if('Notification' in window && Notification.permission==='granted'){
+        new Notification(title,{body,icon:'/static/icon.png'});
+    }
+    // In-page notification
+    const el=document.getElementById('al-triggered');
+    if(el){
+        const div=document.createElement('div');
+        div.style.cssText='background:rgba(251,191,36,.15);border:1px solid var(--yellow);border-radius:8px;padding:12px;margin-bottom:8px;animation:pulse 1s';
+        div.innerHTML=`<b style="color:var(--yellow)">⚠ ${title}</b><br><span style="color:var(--txt2);font-size:.9rem">${body}</span>`;
+        el.prepend(div);
+        setTimeout(()=>div.remove(),30000);
+    }
+}
+
+async function checkAlerts(){
+    try{
+        const r=await fetch('/api/alerts/check');
+        if(!r.ok)return;
+        const d=await r.json();
+        // Show triggered alerts
+        if(d.triggered && d.triggered.length>0){
+            for(const a of d.triggered){
+                const msg=`${a.symbol} وصل إلى ${fmtPr(a.current_price)} (الهدف: ${a.direction==='above'?'فوق':'تحت'} ${fmtPr(a.target_price)})`;
+                showNotification('تنبيه سعر!',msg);
+                playAlertSound();
+            }
+        }
+        // Update status
+        const st=document.getElementById('al-status');
+        if(st){
+            const remaining=d.remaining?.length||0;
+            st.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--bg2);border-radius:8px">
+                <span style="color:var(--txt2);font-size:.85rem">
+                    <span style="color:var(--green)">●</span> فحص تلقائي كل 60 ثانية | ${remaining} تنبيه نشط
+                </span>
+                <button class="btn btn-sm btn-out" onclick="checkAlerts()">فحص الآن</button>
+            </div>`;
+        }
+        loadAlerts();
+    }catch(e){console.error('Alert check error:',e)}
+}
+
+async function loadAlerts(){
+    const r=await fetch('/api/alerts');const d=await r.json();
+    const el=document.getElementById('al-list');if(!el)return;
+    if(!d.alerts?.length){el.innerHTML='<p style="color:var(--txt2);padding:14px">لا توجد تنبيهات</p>';return}
+    let html='';
+    d.alerts.forEach(a=>{
+        const dirColor=a.direction==='above'?'var(--green)':'var(--red)';
+        html+=`<div class="alert-item">
+            <span style="font-weight:700;color:var(--blue)">${a.symbol}</span>
+            <span style="color:${dirColor}">${a.direction==='above'?'فوق':'تحت'} ${fmtPr(a.target_price)}</span>
+            <button class="btn btn-sm btn-red" onclick="removeAlert('${a.symbol}',${a.target_price})">حذف</button>
+        </div>`;
+    });
+    el.innerHTML=html;
+}
+async function addAlert(){
+    const sym=document.getElementById('inp-al-sym').value.trim().toUpperCase();
+    const price=parseFloat(document.getElementById('inp-al-price').value);
+    const dir=document.getElementById('inp-al-dir').value;
+    if(!sym||!price)return;
+    // Request notification permission on first alert
+    if('Notification' in window && Notification.permission==='default'){
+        Notification.requestPermission();
+    }
+    await fetch('/api/alerts/add',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:sym,target_price:price,direction:dir})});
+    document.getElementById('inp-al-sym').value='';document.getElementById('inp-al-price').value='';
+    loadAlerts();checkAlerts();
+}
+async function removeAlert(sym,price){
+    await fetch('/api/alerts/remove',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:sym,target_price:price,direction:'above'})});
+    loadAlerts();checkAlerts();
+}
+
+// === Saudi ETFs ===
+let saudiEtfList=[];
+
+function saudiSubtab(t){
+    document.querySelectorAll('#pn-saudi .sub-tab').forEach((b,i)=>{b.classList.toggle('on',['list','analyze','compare'][i]===t)});
+    document.querySelectorAll('#pn-saudi .sub-pn').forEach(p=>p.classList.remove('on'));
+    document.getElementById('saudi-'+t).classList.add('on');
+    if(t==='list')loadSaudiList();
+}
+
+async function loadSaudiList(){
+    const el=document.getElementById('saudi-etf-list');if(!el)return;
+    el.innerHTML='<div class="ld"><div class="sp"></div></div>';
+    try{
+        const r=await fetch('/api/saudi/list');
+        const d=await r.json();
+        saudiEtfList=d.etfs||[];
+        // Populate dropdowns
+        populateSaudiDropdowns();
+        // Fetch prices for list
+        let html='<table><thead><tr><th>الرمز</th><th>النوع</th><th>الاسم</th><th>الفئة</th><th>السعر</th><th>التغيير</th><th></th></tr></thead><tbody>';
+        for(const etf of saudiEtfList){
+            try{
+                const r2=await fetch(`/api/saudi/${etf.symbol}`);
+                if(r2.ok){
+                    const d2=await r2.json();
+                    const info=d2.info;
+                    const changeClass=info.day_change>=0?'pos':'neg';
+                    const typeColor=etf.type==='REIT'?'var(--purple)':'var(--green)';
+                    html+=`<tr>
+                        <td style="font-weight:700;color:var(--blue);direction:ltr">${etf.symbol}</td>
+                        <td><span style="color:${typeColor};font-weight:600;font-size:.82rem">${etf.type||'ETF'}</span></td>
+                        <td>${etf.name_ar||etf.name}</td>
+                        <td>${etf.category}</td>
+                        <td>${info.current_price?.toFixed(2)||'-'} ر.س</td>
+                        <td class="${changeClass}">${info.day_change>=0?'+':''}${info.day_change?.toFixed(2)||'0'} (${info.day_change_pct>=0?'+':''}${info.day_change_pct?.toFixed(2)||'0'}%)</td>
+                        <td><button class="btn btn-sm btn-out" onclick="document.getElementById('saudi-sym').value='${etf.symbol}';saudiSubtab('analyze');analyzeSaudi()">تحليل</button></td>
+                    </tr>`;
+                }
+            }catch(e){}
+        }
+        html+='</tbody></table>';
+        el.innerHTML=html;
+    }catch(e){el.innerHTML='<p>خطأ في التحميل</p>'}
+}
+
+function populateSaudiDropdowns(){
+    const dl=document.getElementById('saudi-etf-options');
+    if(!dl)return;
+    dl.innerHTML='';
+    for(const etf of saudiEtfList){
+        const opt=document.createElement('option');
+        opt.value=etf.symbol;
+        opt.textContent=`${etf.symbol} - ${etf.name_ar||etf.name}`;
+        dl.appendChild(opt);
+    }
+}
+
+async function analyzeSaudi(){
+    const sym=document.getElementById('saudi-sym').value;
+    if(!sym){showErr('اختر الصندوق');return}
+    hideErr();
+    const el=document.getElementById('saudi-res');
+    el.innerHTML='<div class="ld"><div class="sp"></div><br>جاري التحميل...</div>';
+    try{
+        const r=await fetch(`/api/saudi/${sym}`);
+        if(!r.ok){const e=await r.json();throw new Error(e.detail||'خطأ')}
+        const d=await r.json();
+        const info=d.info;const risk=d.risk||{};
+        let holdings=[];
+        try{
+            const h=await fetch(`/api/saudi/holdings/${sym}`);
+            if(h.ok){const hData=await h.json();holdings=hData.holdings||[]}
+        }catch(_){}
+        let divData={};
+        try{
+            const dr=await fetch(`/api/saudi/dividends/${sym}`);
+            if(dr.ok)divData=await dr.json();
+        }catch(_){}
+        const changeClass=info.day_change>=0?'pos':'neg';
+        let html=`<div class="cd">
+            <h2>${info.name_ar||info.name} (${info.symbol})</h2>
+            <div class="pd">
+                <span class="pp">${info.current_price?.toFixed(2)||'-'} ر.س</span>
+                <span class="pc ${changeClass}">${info.day_change>=0?'+':''}${info.day_change?.toFixed(2)||'0'} (${info.day_change_pct>=0?'+':''}${info.day_change_pct?.toFixed(2)||'0'}%)</span>
+            </div>
+        </div>`;
+
+        // Info cards
+        html+=`<div class="cd"><h2>معلومات الصندوق</h2><div class="mg">
+            <div class="mc"><div class="l">الفئة</div><div class="v">${info.category||'-'}</div></div>
+            <div class="mc"><div class="l">المنصة</div><div class="v">${info.exchange||'-'}</div></div>
+            <div class="mc"><div class="l">العملة</div><div class="v">${info.currency||'-'}</div></div>
+            <div class="mc"><div class="l">أعلى 52 أسبوع</div><div class="v">${info.week52_high?.toFixed(2)||'-'}</div></div>
+            <div class="mc"><div class="l">أدنى 52 أسبوع</div><div class="v">${info.week52_low?.toFixed(2)||'-'}</div></div>
+            <div class="mc"><div class="l">متوسط 50 يوم</div><div class="v">${info.ma50?.toFixed(2)||'-'}</div></div>
+            <div class="mc"><div class="l">متوسط 200 يوم</div><div class="v">${info.ma200?.toFixed(2)||'-'}</div></div>
+            <div class="mc"><div class="l">حجم التداول</div><div class="v">${fmtV(info.volume)}</div></div>
+        </div></div>`;
+
+        // Holdings
+        if(holdings.length>0){
+            html+=`<div class="cd"><h2>أصول الصندوق (${holdings.length} عنصر)</h2>`;
+            // Donut chart
+            html+=`<div style="max-height:350px;margin-bottom:16px"><canvas id="ch-saudi-holdings"></canvas></div>`;
+            // Table
+            html+=`<div style="overflow-x:auto"><table><thead><tr><th>#</th><th>الاسم</th><th>الوزن</th><th>الرسم البياني</th></tr></thead><tbody>`;
+            const colors=['#4f8cff','#34d399','#fb923c','#f87171','#a78bfa','#fbbf24','#60a5fa','#f472b6','#2dd4bf','#e879f9'];
+            holdings.forEach((h,i)=>{
+                const barColor=colors[i%colors.length];
+                html+=`<tr>
+                    <td style="color:var(--txt2)">${i+1}</td>
+                    <td style="font-weight:600">${h.name}</td>
+                    <td style="direction:ltr;text-align:right;font-weight:700;color:var(--blue)">${h.weight?.toFixed(1)||'-'}%</td>
+                    <td style="width:40%"><div style="background:var(--bg2);border-radius:4px;height:20px;overflow:hidden">
+                        <div style="background:${barColor};height:100%;width:${h.weight||0}%;transition:width .5s"></div>
+                    </div></td>
+                </tr>`;
+            });
+            html+='</tbody></table></div></div>';
+
+            // Render donut chart
+            setTimeout(()=>{
+                const ctx=document.getElementById('ch-saudi-holdings')?.getContext('2d');
+                if(ctx){
+                    new Chart(ctx,{type:'doughnut',data:{labels:holdings.map(h=>h.name),datasets:[{data:holdings.map(h=>h.weight),backgroundColor:colors.slice(0,holdings.length),borderWidth:0}]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{position:'right',labels:{color:'#fff',padding:10,font:{size:11},boxWidth:14}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toFixed(1)+'%'}}}}});
+                }
+            },100);
+        }
+
+        // Risk metrics
+        if(risk.volatility){
+            html+=`<div class="cd"><h2>مؤشرات المخاطر</h2><div class="mg">
+                <div class="mc"><div class="l">التذبذب</div><div class="v">${fmtP(risk.volatility)}</div></div>
+                <div class="mc"><div class="l">العائد السنوي</div><div class="v ${pC(risk.annualized_return)}">${pS(risk.annualized_return)}${fmtP(risk.annualized_return)}</div></div>
+                <div class="mc"><div class="l">Sharpe</div><div class="v">${risk.sharpe_ratio}</div></div>
+                <div class="mc"><div class="l">أقصى انخفاض</div><div class="v neg">-${fmtP(risk.max_drawdown)}</div></div>
+                <div class="mc"><div class="l">العائد الكلي</div><div class="v ${pC(risk.total_return)}">${pS(risk.total_return)}${fmtP(risk.total_return)}</div></div>
+            </div></div>`;
+        }
+
+        // Dividends
+        if(divData.distributions&&divData.distributions.length>0){
+            const yieldClass=divData.annualYield>=4?'pos':divData.annualYield>=2?'':'neg';
+            html+=`<div class="cd"><h2>التوزيعات السنوية</h2>
+                <div class="mg" style="margin-bottom:16px">
+                    <div class="mc" style="border-right:3px solid var(--green)"><div class="l">العائد السنوي</div><div class="v ${yieldClass}" style="font-size:1.4rem;font-weight:700">${divData.annualYield.toFixed(1)}%</div></div>
+                    <div class="mc" style="border-right:3px solid var(--blue)"><div class="l">عدد التوزيعات/سنة</div><div class="v" style="font-size:1.4rem;font-weight:700">${divData.dividendsPerYear}</div></div>
+                    ${divData.annualDividend?`<div class="mc" style="border-right:3px solid var(--orange)"><div class="l">التوزيع السنوي للوحدة</div><div class="v" style="font-size:1.4rem;font-weight:700">${divData.annualDividend.toFixed(2)} ر.س</div></div>`:''}
+                </div>
+                <div style="overflow-x:auto"><table><thead><tr><th>التاريخ</th><th>المبلغ للوحدة</th><th>النوع</th></tr></thead><tbody>`;
+            divData.distributions.slice(0,12).forEach(dist=>{
+                const isRepeat=divData.distributions.filter(d=>Math.abs(d.amount-dist.amount)<0.001).length>1;
+                html+=`<tr>
+                    <td style="direction:ltr">${dist.date}</td>
+                    <td style="font-weight:700;color:var(--green)">${dist.amount.toFixed(2)} ر.س</td>
+                    <td>${dist.type}${isRepeat?' <span style="background:rgba(251,191,36,.15);color:#fbbf24;padding:2px 8px;border-radius:10px;font-size:.75rem">مكرر</span>':''}</td>
+                </tr>`;
+            });
+            html+=`</tbody></table></div>`;
+            if(divData.distributions.length>12) html+=`<div style="color:var(--txt2);font-size:.8rem;margin-top:8px">عرض آخر 12 توزيعة من أصل ${divData.distributions.length}</div>`;
+            html+=`</div>`;
+        }else{
+            html+=`<div class="cd"><h2>التوزيعات السنوية</h2>
+                <div style="text-align:center;padding:20px;color:var(--txt2)">
+                    <div style="font-size:2rem;margin-bottom:8px">📊</div>
+                    <div>لا توجد بيانات توزيعات مسجلة لهذا الصندوق</div>
+                </div></div>`;
+        }
+
+        // Price chart
+        html+=`<div class="cd"><h2>السعر</h2>
+            <div class="pb" style="margin-bottom:14px">
+                <button class="btn btn-sm btn-out" onclick="loadSaudiChart('${sym}','1mo',this)">1M</button>
+                <button class="btn btn-sm btn-out" onclick="loadSaudiChart('${sym}','3mo',this)">3M</button>
+                <button class="btn btn-sm btn-out" onclick="loadSaudiChart('${sym}','6mo',this)">6M</button>
+                <button class="btn btn-sm btn-out on" onclick="loadSaudiChart('${sym}','1y',this)">1Y</button>
+            </div>
+            <div style="max-height:380px"><canvas id="ch-saudi-price"></canvas></div>
+        </div>`;
+
+        el.innerHTML=html;
+        loadSaudiChart(sym,'1y',null);
+    }catch(e){showErr(e.message);el.innerHTML=''}
+}
+
+async function loadSaudiChart(sym,period,btn){
+    if(btn){document.querySelectorAll('#saudi-res .btn-sm').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
+    try{
+        const r=await fetch(`/api/saudi/history/${sym}?period=${period}`);
+        if(!r.ok)return;
+        const d=await r.json();
+        if(d.data&&d.data.length>0){
+            if(charts.saudi)charts.saudi.destroy();
+            const ctx=document.getElementById('ch-saudi-price')?.getContext('2d');
+            if(!ctx)return;
+            const prices=d.data.map(x=>x.close);
+            const isUp=prices[prices.length-1]>=prices[0];
+            charts.saudi=new Chart(ctx,{type:'line',data:{labels:d.data.map(x=>x.date),datasets:[{label:sym,data:prices,borderColor:isUp?'#34d399':'#f87171',backgroundColor:isUp?'rgba(52,211,153,.1)':'rgba(248,113,113,.1)',fill:true,tension:.3,pointRadius:0,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:true,scales:{x:{ticks:{color:'#a0a0b8',maxTicksLimit:8,maxRotation:0},grid:{display:false}},y:{ticks:{color:'#a0a0b8',callback:v=>v.toFixed(2)},grid:{color:'rgba(255,255,255,.05)'}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(2)+' ر.س'}}},interaction:{intersect:false,mode:'index'}}});
+        }
+    }catch(e){console.error('Saudi chart error:',e)}
+}
+
+async function compareSaudi(){
+    const a=document.getElementById('saudi-sym-a').value;
+    const b=document.getElementById('saudi-sym-b').value;
+    if(!a||!b){showErr('اختر صندوقين');return}
+    if(a===b){showErr('اختر صندوقين مختلفين');return}
+    hideErr();
+    const el=document.getElementById('saudi-cmp-res');
+    el.innerHTML='<div class="ld"><div class="sp"></div><br>جاري التحميل...</div>';
+    try{
+        const r=await fetch('/api/saudi/compare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol_a:a,symbol_b:b})});
+        if(!r.ok){const e=await r.json();throw new Error(e.detail||'خطأ')}
+        const d=await r.json();
+        const iA=d.etf_a.info,iB=d.etf_b.info;
+        const rA=d.etf_a.risk||{},rB=d.etf_b.risk||{};
+
+        let html=`<div class="cd">
+            <h2>مقارنة: ${iA.name_ar||iA.name} vs ${iB.name_ar||iB.name}</h2>
+            <div class="lr">
+                <div class="li"><span class="da"></span>${iA.symbol}</div>
+                <div class="li"><span class="db"></span>${iB.symbol}</div>
+            </div>
+        </div>`;
+
+        html+=`<div class="cd"><h2>مقارنة المؤشرات</h2>
+            <div class="cmr" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+                ${cm('السعر',iA.current_price,iB.current_price,v=>v?.toFixed(2)||'-')}
+                ${cm('التغيير اليوم',iA.day_change_pct,iB.day_change_pct,v=>(v>=0?'+':'')+(v?.toFixed(2)||'0')+'%')}
+                ${cm('التذبذب',rA.volatility,rB.volatility,fmtP)}
+                ${cm('العائد السنوي',rA.annualized_return,rB.annualized_return,v=>pS(v)+fmtP(v))}
+                ${cm('Sharpe',rA.sharpe_ratio,rB.sharpe_ratio)}
+                ${cm('أقصى انخفاض',rA.max_drawdown,rB.max_drawdown,v=>'-'+fmtP(v))}
+                ${cm('العائد الكلي',rA.total_return,rB.total_return,v=>pS(v)+fmtP(v))}
+                ${cm('أعلى 52 أسبوع',iA.week52_high,iB.week52_high,v=>v?.toFixed(2)||'-')}
+                ${cm('أدنى 52 أسبوع',iA.week52_low,iB.week52_low,v=>v?.toFixed(2)||'-')}
+            </div>
+        </div>`;
+
+        // Performance chart
+        html+=`<div class="cd"><h2>مقارنة الأداء</h2><div style="max-height:400px"><canvas id="ch-saudi-cmp"></canvas></div></div>`;
+
+        el.innerHTML=html;
+
+        // Load performance chart
+        const [hA,hB]=await Promise.all([
+            fetch(`/api/saudi/history/${a}?period=1y`).then(r=>r.json()),
+            fetch(`/api/saudi/history/${b}?period=1y`).then(r=>r.json())
+        ]);
+        if(hA.data&&hB.data){
+            const ctx=document.getElementById('ch-saudi-cmp')?.getContext('2d');
+            if(ctx){
+                // Normalize to returns
+                const baseA=hA.data[0]?.close||1;
+                const baseB=hB.data[0]?.close||1;
+                const retA=hA.data.map(d=>((d.close/baseA)-1)*100);
+                const retB=hB.data.map(d=>((d.close/baseB)-1)*100);
+                const minLen=Math.min(retA.length,retB.length);
+                charts.saudiCmp=new Chart(ctx,{type:'line',data:{labels:hA.data.slice(0,minLen).map(d=>d.date),datasets:[
+                    {label:a,data:retA.slice(0,minLen),borderColor:'#4f8cff',fill:false,tension:.3,pointRadius:0,borderWidth:2},
+                    {label:b,data:retB.slice(0,minLen),borderColor:'#fb923c',fill:false,tension:.3,pointRadius:0,borderWidth:2}
+                ]},options:{responsive:true,maintainAspectRatio:true,scales:{x:{ticks:{color:'#a0a0b8',maxTicksLimit:8,maxRotation:0},grid:{display:false}},y:{ticks:{color:'#a0a0b8',callback:v=>v.toFixed(1)+'%'},grid:{color:'rgba(255,255,255,.05)'}}},plugins:{legend:{labels:{color:'#fff',padding:14,font:{size:12}}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toFixed(2)+'%'}}},interaction:{intersect:false,mode:'index'}}});
+            }
+        }
+    }catch(e){showErr(e.message);el.innerHTML=''}
+}
+
+// === Mutual Funds (صناديق الاستثمار العامة) ===
+let fundsPage=1;
+let fundsFilters={};
+
+function fundsSubtab(t){
+    document.querySelectorAll('#pn-funds .sub-tab').forEach((b,i)=>{b.classList.toggle('on',['list','analyze','stats'][i]===t)});
+    document.querySelectorAll('#pn-funds .sub-pn').forEach(p=>p.classList.remove('on'));
+    document.getElementById('funds-'+t).classList.add('on');
+    if(t==='stats')loadFundsStats();
+    if(t==='list')populateFundsDropdown();
+}
+
+async function searchFunds(page=1){
+    fundsPage=page;
+    const search=document.getElementById('funds-search')?.value||'';
+    const currency=document.getElementById('funds-currency')?.value||'';
+    const objective=document.getElementById('funds-objective')?.value||'';
+    const sort=document.getElementById('funds-sort')?.value||'nav-desc';
+    const [sort_by,sort_order]=sort.split('-');
+
+    const params=new URLSearchParams({page,page_size:50,sort_by,sort_order});
+    if(search)params.set('search',search);
+    if(currency)params.set('currency',currency);
+    if(objective)params.set('objective',objective);
+
+    const el=document.getElementById('funds-table-wrap');
+    el.innerHTML='<div class="ld"><div class="sp"></div></div>';
+
+    try{
+        const r=await fetch('/api/mutual-funds?'+params);
+        const d=await r.json();
+
+        // Populate filter dropdowns on first load
+        if(d.filters&&!fundsFilters.currencies){
+            fundsFilters=d.filters;
+            const curSel=document.getElementById('funds-currency');
+            const objSel=document.getElementById('funds-objective');
+            if(curSel){
+                curSel.innerHTML='<option value="">جميع العملات</option>';
+                d.filters.currencies.forEach(c=>{if(c){const o=document.createElement('option');o.value=c;o.textContent=c;curSel.appendChild(o)}});
+            }
+            if(objSel){
+                objSel.innerHTML='<option value="">جميع الأهداف</option>';
+                d.filters.objectives.forEach(o=>{if(o){const opt=document.createElement('option');opt.value=o;opt.textContent=o;objSel.appendChild(opt)}});
+            }
+        }
+
+        document.getElementById('funds-count').textContent=`(${d.total} صندوق)`;
+
+        let html='<table><thead><tr><th>الرمز</th><th>اسم الصندوق</th><th>مدير الصندوق</th><th>العملية</th><th>صافي القيمة</th><th>سعر الوحدة</th><th>التغير السنوي</th><th>التاريخ</th><th></th></tr></thead><tbody>';
+        d.funds.forEach(f=>{
+            const ytd=parseFloat(f.ytdChange)||0;
+            const ytdClass=ytd>=0?'pos':'neg';
+            const nav=parseFloat(f.nav?.replace(/,/g,''))||0;
+            html+=`<tr>
+                <td style="font-weight:700;color:var(--blue);direction:ltr">${f.symbol}</td>
+                <td style="max-width:250px">${f.name}</td>
+                <td style="font-size:.82rem">${f.fundManager}</td>
+                <td style="font-size:.82rem">${f.currency}</td>
+                <td>${fmtV(nav)}</td>
+                <td>${f.unitPrice}</td>
+                <td class="${ytdClass}">${ytd>=0?'+':''}${f.ytdChange}%</td>
+                <td style="font-size:.82rem">${f.valuationDate}</td>
+                <td><button class="btn btn-sm btn-out" onclick="document.getElementById('funds-analyze-sym').value='${f.symbol}';fundsSubtab('analyze');analyzeFund()">تحليل</button></td>
+            </tr>`;
+        });
+        html+='</tbody></table>';
+        el.innerHTML=html;
+
+        // Pagination
+        const pgEl=document.getElementById('funds-pagination');
+        let pgHtml='';
+        if(d.total_pages>1){
+            if(d.page>1)pgHtml+=`<button class="btn btn-sm" onclick="searchFunds(${d.page-1})">السابق</button>`;
+            const start=Math.max(1,d.page-2);
+            const end=Math.min(d.total_pages,d.page+2);
+            for(let i=start;i<=end;i++){
+                pgHtml+=`<button class="btn btn-sm ${i===d.page?'btn-on':''}" onclick="searchFunds(${i})">${i}</button>`;
+            }
+            if(d.page<d.total_pages)pgHtml+=`<button class="btn btn-sm" onclick="searchFunds(${d.page+1})">التالي</button>`;
+        }
+        pgEl.innerHTML=pgHtml;
+    }catch(e){el.innerHTML='<p>خطأ في التحميل</p>'}
+}
+
+let allFundsList=[];
+
+async function populateFundsDropdown(){
+    if(allFundsList.length>0)return;
+    try{
+        const r=await fetch('/api/mutual-funds?page=1&page_size=400&sort_by=name&sort_order=asc');
+        const d=await r.json();
+        allFundsList=d.funds||[];
+        const dl=document.getElementById('funds-options');
+        if(!dl)return;
+        dl.innerHTML='';
+        allFundsList.forEach(f=>{
+            const opt=document.createElement('option');
+            opt.value=f.symbol;
+            opt.textContent=f.symbol+' - '+f.name;
+            dl.appendChild(opt);
+        });
+    }catch(e){}
+}
+
+async function analyzeFund(){
+    const sym=document.getElementById('funds-analyze-sym')?.value?.trim();
+    if(!sym){showErr('اكتب رمز الصندوق');return}
+    hideErr();
+    const el=document.getElementById('funds-analyze-res');
+    el.innerHTML='<div class="ld"><div class="sp"></div><br>جاري التحميل...</div>';
+    try{
+        const r=await fetch('/api/mutual-funds/'+sym);
+        if(!r.ok){const e=await r.json();throw new Error(e.detail||'الصندوق غير موجود')}
+        const f=await r.json();
+        const nav=parseFloat(f.nav?.replace(/,/g,''))||0;
+        const unitPrice=parseFloat(f.unitPrice)||0;
+        const ytd=parseFloat(f.ytdChange)||0;
+        const ytdClass=ytd>=0?'pos':'neg';
+        const ytdSign=ytd>=0?'+':'';
+
+        // Calculate derived metrics
+        const isSAR=f.currency.includes('ريال');
+        const isUSD=f.currency.includes('دولار');
+        const currencySymbol=isSAR?'ر.س':isUSD?'$':f.currency;
+        const isSharia=f.shariaCompliant.includes('موافق');
+
+        let html=`<div class="cd">
+            <h2>${f.name}</h2>
+            <div class="pd">
+                <span class="pp">${unitPrice.toFixed(4)} ${currencySymbol}</span>
+                <span class="pc ${ytdClass}">${ytdSign}${f.ytdChange}% من بداية العام</span>
+            </div>
+        </div>`;
+
+        // Fund Info Cards
+        html+=`<div class="cd"><h2>معلومات الصندوق</h2><div class="mg">
+            <div class="mc"><div class="l">الرمز</div><div class="v" style="direction:ltr">${f.symbol}</div></div>
+            <div class="mc"><div class="l">مدير الصندوق</div><div class="v">${f.fundManager}</div></div>
+            <div class="mc"><div class="l">العملة</div><div class="v">${f.currency}</div></div>
+            <div class="mc"><div class="l">التوافق الشرعي</div><div class="v" style="color:${isSharia?'var(--green)':'var(--red)'}">${f.shariaCompliant}</div></div>
+            <div class="mc"><div class="l">هدف الصندوق</div><div class="v">${f.objective}</div></div>
+            <div class="mc"><div class="l">تاريخ التقييم</div><div class="v">${f.valuationDate}</div></div>
+        </div></div>`;
+
+        // Financial Info
+        html+=`<div class="cd"><h2>المعلومات المالية</h2><div class="mg">
+            <div class="mc"><div class="l">صافي قيمة الأصول</div><div class="v">${fmtV(nav)} ${currencySymbol}</div></div>
+            <div class="mc"><div class="l">سعر الوحدة</div><div class="v">${unitPrice.toFixed(4)} ${currencySymbol}</div></div>
+            <div class="mc"><div class="l">التغير عن بداية العام</div><div class="v ${ytdClass}">${ytdSign}${f.ytdChange}%</div></div>
+        </div></div>`;
+
+        // Holdings / Investment Profile
+        let fundHoldings=[];
+        try{
+            const hr=await fetch(`/api/mutual-funds/${sym}/holdings`);
+            if(hr.ok){const hd=await hr.json();fundHoldings=hd.holdings||[]}
+        }catch(_){}
+        let fundDivData={};
+        try{
+            const dr=await fetch(`/api/saudi/dividends/${sym}`);
+            if(dr.ok)fundDivData=await dr.json();
+        }catch(_){}
+
+        html+=`<div class="cd"><h2>تحليل الأصول والاستثمار</h2>`;
+        html+=`<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px">
+            <div class="mc" style="border-right:3px solid var(--blue)"><div class="l">الفئة الاستثمارية</div><div class="v" style="font-size:1.1rem">${f.objective}</div></div>
+            <div class="mc" style="border-right:3px solid var(--green)"><div class="l">العملة</div><div class="v" style="font-size:1.1rem">${f.currency}</div></div>
+            <div class="mc" style="border-right:3px solid ${isSharia?'var(--green)':'var(--red)'}"><div class="l">التوافق الشرعي</div><div class="v" style="font-size:1.1rem">${f.shariaCompliant}</div></div>
+            <div class="mc" style="border-right:3px solid var(--purple)"><div class="l">مدير الصندوق</div><div class="v" style="font-size:1rem">${f.fundManager}</div></div>
+        </div>`;
+
+        if(fundHoldings.length>0){
+            const fcolors=['#4f8cff','#34d399','#fb923c','#f87171','#a78bfa','#fbbf24','#60a5fa','#f472b6','#2dd4bf','#e879f9','#818cf8','#4ade80'];
+            html+=`<div style="margin-top:16px">
+                <div style="color:var(--txt2);margin-bottom:10px;font-size:.9rem">أكبر الاستثمارات (${fundHoldings.length} عنصر)</div>
+                <div style="max-height:350px;margin-bottom:16px"><canvas id="ch-fund-holdings"></canvas></div>
+                <div style="overflow-x:auto"><table><thead><tr><th>#</th><th>السهم</th><th>الوزن</th><th>الرسم</th></tr></thead><tbody>`;
+            fundHoldings.forEach((h,i)=>{
+                const bc=fcolors[i%fcolors.length];
+                html+=`<tr>
+                    <td style="color:var(--txt2)">${i+1}</td>
+                    <td style="font-weight:600">${h.name} <span style="color:var(--txt2);font-size:.8rem;direction:ltr;display:inline-block">${h.symbol}</span></td>
+                    <td style="direction:ltr;text-align:right;font-weight:700;color:var(--blue)">${h.weight?.toFixed(1)}%</td>
+                    <td style="width:40%"><div style="background:var(--bg2);border-radius:4px;height:20px;overflow:hidden">
+                        <div style="background:${bc};height:100%;width:${h.weight}%;transition:width .5s"></div>
+                    </div></td>
+                </tr>`;
+            });
+            html+=`</tbody></table></div></div>`;
+        }else{
+            const isEquity = f.objective.includes('تنمية');
+            const isDebt = f.objective.includes('سندات') || f.objective.includes('صكوك');
+            const isMoneyMarket = f.objective.includes('نقد') || f.objective.includes('سيولة');
+            let pctEquity=0, pctDebt=0, pctCash=0;
+            if(isEquity){pctEquity=80;pctCash=20}
+            else if(isDebt){pctDebt=70;pctCash=30}
+            else if(isMoneyMarket){pctCash=100}
+            else{pctEquity=50;pctDebt=30;pctCash=20}
+            html+=`<div style="margin-top:16px">
+                <div style="color:var(--txt2);margin-bottom:10px;font-size:.9rem">التوزيع التقديري للأصول</div>
+                <div style="position:relative;height:35px;background:var(--bg2);border-radius:var(--r);overflow:hidden;display:flex">`;
+            if(pctEquity>0) html+=`<div style="width:${pctEquity}%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#fff">${pctEquity>10?pctEquity+'% أسهم':''}</div>`;
+            if(pctDebt>0) html+=`<div style="width:${pctDebt}%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#fff">${pctDebt>10?pctDebt+'% سندات':''}</div>`;
+            if(pctCash>0) html+=`<div style="width:${pctCash}%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:600;color:#fff">${pctCash>10?pctCash+'% نقد':''}</div>`;
+            html+=`</div></div>`;
+            html+=`<div style="margin-top:14px;padding:10px;background:rgba(79,140,255,.08);border-radius:var(--r);font-size:.82rem;color:var(--txt2)">
+                ℹ️ بيانات الأصول الفعلية غير متوفرة لهذا الصندوق. التوزيع أعلاه تقديري.
+            </div>`;
+        }
+        html+=`</div>`;
+
+        // Fund Dividends
+        const hasDivs=fundDivData.distributions&&fundDivData.distributions.length>0;
+        const yldClass=fundDivData.annualYield>=4?'pos':fundDivData.annualYield>=2?'':'neg';
+        html+=`<div class="cd"><h2>التوزيعات السنوية</h2>`;
+        if(hasDivs){
+            html+=`<div class="mg" style="margin-bottom:16px">
+                <div class="mc" style="border-right:3px solid var(--green)"><div class="l">العائد السنوي</div><div class="v ${yldClass}" style="font-size:1.4rem;font-weight:700">${fundDivData.annualYield.toFixed(1)}%</div></div>
+                <div class="mc" style="border-right:3px solid var(--blue)"><div class="l">عدد التوزيعات/سنة</div><div class="v" style="font-size:1.4rem;font-weight:700">${fundDivData.dividendsPerYear}</div></div>
+            </div>
+            <div style="overflow-x:auto"><table><thead><tr><th>التاريخ</th><th>المبلغ للوحدة</th><th>النوع</th></tr></thead><tbody>`;
+            fundDivData.distributions.slice(0,12).forEach(dist=>{
+                const isRepeat=fundDivData.distributions.filter(d=>Math.abs(d.amount-dist.amount)<0.001).length>1;
+                html+=`<tr>
+                    <td style="direction:ltr">${dist.date}</td>
+                    <td style="font-weight:700;color:var(--green)">${dist.amount.toFixed(4)} ${currencySymbol}</td>
+                    <td>${dist.type}${isRepeat?' <span style="background:rgba(251,191,36,.15);color:#fbbf24;padding:2px 8px;border-radius:10px;font-size:.75rem">مكرر</span>':''}</td>
+                </tr>`;
+            });
+            html+=`</tbody></table></div>`;
+            if(fundDivData.distributions.length>12) html+=`<div style="color:var(--txt2);font-size:.8rem;margin-top:8px">عرض آخر 12 توزيعة من أصل ${fundDivData.distributions.length}</div>`;
+        }else{
+            html+=`<div style="text-align:center;padding:20px;color:var(--txt2)">
+                <div style="font-size:2rem;margin-bottom:8px">💰</div>
+                <div>لا توجد بيانات توزيعات متاحة لهذا الصندوق</div>
+            </div>`;
+        }
+        html+=`</div>`;
+
+        // Performance visualization
+        html+=`<div class="cd"><h2>أداء الصندوق</h2>
+            <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+                <div style="flex:1;min-width:200px">
+                    <div style="color:var(--txt2);margin-bottom:8px">الأداء من بداية العام</div>
+                    <div style="position:relative;height:30px;background:var(--bg2);border-radius:var(--r);overflow:hidden">
+                        <div style="position:absolute;top:0;left:0;height:100%;width:${Math.min(Math.abs(ytd),100)}%;background:${ytd>=0?'var(--green)':'var(--red)'};border-radius:var(--r);transition:width .5s"></div>
+                        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-weight:700;color:#fff;z-index:1">${ytdSign}${f.ytdChange}%</div>
+                    </div>
+                </div>
+                <div style="flex:1;min-width:200px">
+                    <div style="color:var(--txt2);margin-bottom:8px">حجم الأصول</div>
+                    <div style="font-size:1.8rem;font-weight:700;color:var(--blue)">${fmtV(nav)}</div>
+                    <div style="color:var(--txt2);font-size:.85rem">${currencySymbol}</div>
+                </div>
+            </div>
+        </div>`;
+
+        // Comparison with market context
+        const avgYtd=3.5;
+        const vsMarket=ytd-avgYtd;
+        const vsMarketClass=vsMarket>=0?'pos':'neg';
+        html+=`<div class="cd"><h2>مقارنة مع السوق</h2><div class="mg">
+            <div class="mc"><div class="l">أداء الصندوق</div><div class="v ${ytdClass}">${ytdSign}${f.ytdChange}%</div></div>
+            <div class="mc"><div class="l">متوسط السوق (تقديري)</div><div class="v">${avgYtd>=0?'+':''}${avgYtd}%</div></div>
+            <div class="mc"><div class="l">الفرق عن السوق</div><div class="v ${vsMarketClass}">${vsMarket>=0?'+':''}${vsMarket.toFixed(2)}%</div></div>
+        </div></div>`;
+
+        // Investment Rating based on data
+        let rating='';
+        let ratingColor='';
+        let ratingDesc='';
+        if(ytd>10){rating='ممتاز';ratingColor='var(--green)';ratingDesc='أداء ممتاز من بداية العام'}
+        else if(ytd>5){rating='جيد جداً';ratingColor='var(--green)';ratingDesc='أداء جيد جداً'}
+        else if(ytd>0){rating='جيد';ratingColor='var(--blue)';ratingDesc='أداء إيجابي'}
+        else if(ytd>-5){rating='متوسط';ratingColor='var(--orange)';ratingDesc='أداء متوسط'}
+        else{rating='ضعيف';ratingColor='var(--red)';ratingDesc='أداء سلبي'}
+
+        html+=`<div class="cd"><h2>تقييم الصندوق</h2>
+            <div style="text-align:center;padding:20px">
+                <div style="font-size:3rem;font-weight:800;color:${ratingColor}">${rating}</div>
+                <div style="color:var(--txt2);margin-top:8px">${ratingDesc}</div>
+                <div style="margin-top:12px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+                    <div class="mc" style="min-width:120px"><div class="l">العملة</div><div class="v">${f.currency}</div></div>
+                    <div class="mc" style="min-width:120px"><div class="l">شرعي</div><div class="v" style="color:${isSharia?'var(--green)':'var(--red)'}">${isSharia?'نعم':'لا'}</div></div>
+                    <div class="mc" style="min-width:120px"><div class="l">الحجم</div><div class="v">${fmtV(nav)}</div></div>
+                </div>
+            </div>
+        </div>`;
+
+        // Add to watchlist button
+        html+=`<div class="cd" style="text-align:center">
+            <button class="btn btn-green" onclick="addToWatchlistDirect('${f.symbol}')" style="padding:12px 32px;font-size:1rem">
+                + إضافة إلى قائمة المتابعة
+            </button>
+        </div>`;
+
+        el.innerHTML=html;
+        if(fundHoldings.length>0){
+            setTimeout(()=>{
+                const ctx=document.getElementById('ch-fund-holdings')?.getContext('2d');
+                if(ctx){
+                    const fcolors=['#4f8cff','#34d399','#fb923c','#f87171','#a78bfa','#fbbf24','#60a5fa','#f472b6','#2dd4bf','#e879f9','#818cf8','#4ade80'];
+                    new Chart(ctx,{type:'doughnut',data:{labels:fundHoldings.map(h=>h.name),datasets:[{data:fundHoldings.map(h=>h.weight),backgroundColor:fcolors.slice(0,fundHoldings.length),borderWidth:0}]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{position:'right',labels:{color:'#fff',padding:10,font:{size:11},boxWidth:14}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toFixed(1)+'%'}}}}});
+                }
+            },100);
+        }
+    }catch(e){showErr(e.message);el.innerHTML=''}
+}
+
+function addToWatchlistDirect(sym){
+    fetch('/api/watchlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:sym})})
+    .then(r=>r.json()).then(d=>{
+        if(d.ok)alert('تمت الإضافة إلى قائمة المتابعة');
+    }).catch(()=>alert('خطأ في الإضافة'));
+}
+
+async function loadFundsStats(){
+    const el=document.getElementById('funds-stats-content');
+    el.innerHTML='<div class="ld"><div class="sp"></div></div>';
+    try{
+        const r=await fetch('/api/mutual-funds/stats');
+        const d=await r.json();
+        let html=`<div class="mg">
+            <div class="mc"><div class="l">عدد الصناديق</div><div class="v">${d.total_funds}</div></div>
+            <div class="mc"><div class="l">إجمالي الأصول</div><div class="v">${fmtV(d.total_nav)}</div></div>
+        </div>`;
+
+        // By currency
+        html+='<h3 style="margin-top:16px">التوزيع حسب العملة</h3><div class="mg">';
+        Object.entries(d.currencies).forEach(([k,v])=>{
+            html+=`<div class="mc"><div class="l">${k}</div><div class="v">${v} صندوق</div></div>`;
+        });
+        html+='</div>';
+
+        // By objective
+        html+='<h3 style="margin-top:16px">التوزيع حسب الهدف</h3><div class="mg">';
+        Object.entries(d.objectives).forEach(([k,v])=>{
+            html+=`<div class="mc"><div class="l">${k}</div><div class="v">${v} صندوق</div></div>`;
+        });
+        html+='</div>';
+
+        // Top funds
+        html+='<h3 style="margin-top:16px">أكبر 10 صناديق أصولاً</h3><table><thead><tr><th>الرمز</th><th>الاسم</th><th>العملة</th><th>صافي الأصول</th></tr></thead><tbody>';
+        d.top_funds.forEach(f=>{
+            html+=`<tr>
+                <td style="font-weight:700;color:var(--blue);direction:ltr">${f.symbol}</td>
+                <td>${f.name}</td>
+                <td style="font-size:.82rem">${f.currency}</td>
+                <td>${f.nav}</td>
+            </tr>`;
+        });
+        html+='</tbody></table>';
+
+        el.innerHTML=html;
+    }catch(e){el.innerHTML='<p>خطأ في التحميل</p>'}
+}
+
+// Initialize alerts on page load
+window.addEventListener('load',initAlerts);
+</script>
+</body>
+</html>

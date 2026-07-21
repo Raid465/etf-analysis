@@ -1,0 +1,6107 @@
+{
+  "9400": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "9401": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "9405": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "9406": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "9407": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "9408": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "9412": {
+    "annualYield": 0,
+    "dividendsPerYear": 0,
+    "currency": "ريال سعودي",
+    "distributions": []
+  },
+  "4330": {
+    "annualYield": 4.8,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "price": 4.83,
+    "annualDividend": 0.32,
+    "distributions": [
+      {
+        "date": "2026-04-09",
+        "amount": 0.16,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-09-03",
+        "amount": 0.16,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-04-08",
+        "amount": 0.16,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-08-29",
+        "amount": 0.15,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-04-03",
+        "amount": 0.15,
+        "type": "quarterly"
+      },
+      {
+        "date": "2023-09-18",
+        "amount": 0.25,
+        "type": "quarterly"
+      },
+      {
+        "date": "2023-04-09",
+        "amount": 0.25,
+        "type": "quarterly"
+      },
+      {
+        "date": "2022-09-05",
+        "amount": 0.44,
+        "type": "quarterly"
+      },
+      {
+        "date": "2022-03-29",
+        "amount": 0.47,
+        "type": "quarterly"
+      }
+    ]
+  },
+  "4331": {
+    "annualYield": 5.8,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "price": 7.41,
+    "annualDividend": 0.43,
+    "distributions": [
+      {
+        "date": "2025-12-01",
+        "amount": 0.43,
+        "type": "annual"
+      },
+      {
+        "date": "2024-12-08",
+        "amount": 0.4,
+        "type": "annual"
+      },
+      {
+        "date": "2023-11-21",
+        "amount": 0.34,
+        "type": "annual"
+      },
+      {
+        "date": "2022-10-18",
+        "amount": 0.29,
+        "type": "annual"
+      },
+      {
+        "date": "2021-12-06",
+        "amount": 0.34,
+        "type": "annual"
+      },
+      {
+        "date": "2020-10-18",
+        "amount": 0.3,
+        "type": "annual"
+      },
+      {
+        "date": "2019-06-26",
+        "amount": 0.5,
+        "type": "annual"
+      },
+      {
+        "date": "2018-07-24",
+        "amount": 0.5,
+        "type": "annual"
+      }
+    ]
+  },
+  "4340": {
+    "annualYield": 5.2,
+    "dividendsPerYear": 4,
+    "currency": "ريال سعودي",
+    "price": 5.01,
+    "annualDividend": 0.26,
+    "distributions": [
+      {
+        "date": "2026-04-29",
+        "amount": 0.13,
+        "type": "quarterly"
+      },
+      {
+        "date": "2026-02-11",
+        "amount": 0.14,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-10-29",
+        "amount": 0.13,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-07-30",
+        "amount": 0.12,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-05-07",
+        "amount": 0.13,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-02-09",
+        "amount": 0.14,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-11-10",
+        "amount": 0.14,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-08-11",
+        "amount": 0.13,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-05-08",
+        "amount": 0.14,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-02-11",
+        "amount": 0.14,
+        "type": "quarterly"
+      }
+    ]
+  },
+  "4342": {
+    "annualYield": 7.1,
+    "dividendsPerYear": 4,
+    "currency": "ريال سعودي",
+    "price": 11.26,
+    "annualDividend": 0.8,
+    "distributions": [
+      {
+        "date": "2026-05-05",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2026-02-09",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-11-17",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-08-28",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-06-04",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-02-25",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-11-18",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-08-27",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-05-22",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-02-14",
+        "amount": 0.2,
+        "type": "quarterly"
+      }
+    ]
+  },
+  "4332": {
+    "annualYield": 4.6,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "price": 4.88,
+    "annualDividend": 0.22,
+    "distributions": [
+      {
+        "date": "2026-02-09",
+        "amount": 0.1,
+        "type": "annual"
+      },
+      {
+        "date": "2025-08-11",
+        "amount": 0.24,
+        "type": "annual"
+      },
+      {
+        "date": "2024-08-26",
+        "amount": 0.2,
+        "type": "annual"
+      },
+      {
+        "date": "2024-03-03",
+        "amount": 0.13,
+        "type": "annual"
+      }
+    ]
+  },
+  "4334": {
+    "annualYield": 6.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "price": 9.0,
+    "annualDividend": 0.59,
+    "distributions": [
+      {
+        "date": "2026-03-02",
+        "amount": 0.34,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-08-18",
+        "amount": 0.33,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-03-04",
+        "amount": 0.34,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-08-14",
+        "amount": 0.33,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-03-20",
+        "amount": 0.33,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2023-08-23",
+        "amount": 0.31,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2023-03-19",
+        "amount": 0.18,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2022-11-27",
+        "amount": 0.44,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "4335": {
+    "annualYield": 12.2,
+    "dividendsPerYear": 3,
+    "currency": "ريال سعودي",
+    "price": 3.69,
+    "annualDividend": 0.45,
+    "distributions": [
+      {
+        "date": "2026-04-01",
+        "amount": 0.1,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-08-18",
+        "amount": 0.1,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-03-25",
+        "amount": 0.14,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-08-21",
+        "amount": 0.1,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-04-17",
+        "amount": 0.1,
+        "type": "quarterly"
+      },
+      {
+        "date": "2023-08-22",
+        "amount": 0.07,
+        "type": "quarterly"
+      },
+      {
+        "date": "2023-02-06",
+        "amount": 0.2,
+        "type": "quarterly"
+      },
+      {
+        "date": "2022-07-27",
+        "amount": 0.3,
+        "type": "quarterly"
+      }
+    ]
+  },
+  "4337": {
+    "annualYield": 1.8,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "price": 5.01,
+    "annualDividend": 0.09,
+    "distributions": [
+      {
+        "date": "2026-04-08",
+        "amount": 0.09,
+        "type": "annual"
+      }
+    ]
+  },
+  "4338": {
+    "annualYield": 7.6,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "price": 6.6,
+    "annualDividend": 0.5,
+    "distributions": [
+      {
+        "date": "2026-04-14",
+        "amount": 0.22,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-09-04",
+        "amount": 0.2,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-04-03",
+        "amount": 0.25,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-09-04",
+        "amount": 0.25,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-03-20",
+        "amount": 0.25,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2023-08-28",
+        "amount": 0.25,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2023-03-15",
+        "amount": 0.3,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2022-07-27",
+        "amount": 0.35,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "4339": {
+    "annualYield": 8.8,
+    "dividendsPerYear": 4,
+    "currency": "ريال سعودي",
+    "price": 5.43,
+    "annualDividend": 0.48,
+    "distributions": [
+      {
+        "date": "2026-05-06",
+        "amount": 0.1,
+        "type": "quarterly"
+      },
+      {
+        "date": "2026-01-28",
+        "amount": 0.09,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-11-02",
+        "amount": 0.09,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-08-17",
+        "amount": 0.09,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-04-29",
+        "amount": 0.084,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-02-02",
+        "amount": 0.084,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-12-08",
+        "amount": 0.07,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-09-26",
+        "amount": 0.061,
+        "type": "quarterly"
+      }
+    ]
+  },
+  "4344": {
+    "annualYield": 6.7,
+    "dividendsPerYear": 4,
+    "currency": "ريال سعودي",
+    "price": 7.91,
+    "annualDividend": 0.53,
+    "distributions": [
+      {
+        "date": "2026-05-31",
+        "amount": 0.137,
+        "type": "quarterly"
+      },
+      {
+        "date": "2026-01-18",
+        "amount": 0.144,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-11-16",
+        "amount": 0.137,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-07-27",
+        "amount": 0.131,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-05-04",
+        "amount": 0.125,
+        "type": "quarterly"
+      },
+      {
+        "date": "2025-01-01",
+        "amount": 0.125,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-11-24",
+        "amount": 0.125,
+        "type": "quarterly"
+      },
+      {
+        "date": "2024-07-14",
+        "amount": 0.125,
+        "type": "quarterly"
+      }
+    ]
+  },
+  "4349": {
+    "annualYield": 6.9,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "price": 8.14,
+    "annualDividend": 0.56,
+    "distributions": [
+      {
+        "date": "2026-07-08",
+        "amount": 0.32,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2026-01-11",
+        "amount": 0.32,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-07-09",
+        "amount": 0.32,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-01-08",
+        "amount": 0.32,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-07-21",
+        "amount": 0.32,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-01-10",
+        "amount": 0.32,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2023-07-09",
+        "amount": 0.32,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "4350": {
+    "annualYield": 10.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "price": 7.5,
+    "annualDividend": 0.75,
+    "distributions": [
+      {
+        "date": "2025-11-12",
+        "amount": 0.37,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-04-29",
+        "amount": 0.38,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "133005": {
+    "annualYield": 2.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.46,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-10",
+        "amount": 0.46,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-12-10",
+        "amount": 0.45,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-06-05",
+        "amount": 0.45,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "159001": {
+    "annualYield": 2.0,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-20",
+        "amount": 0.64,
+        "type": "annual"
+      },
+      {
+        "date": "2024-12-15",
+        "amount": 0.6,
+        "type": "annual"
+      },
+      {
+        "date": "2023-12-18",
+        "amount": 0.55,
+        "type": "annual"
+      }
+    ]
+  },
+  "011167": {
+    "annualYield": 2.2,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-10",
+        "amount": 0.018,
+        "type": "annual"
+      },
+      {
+        "date": "2024-12-05",
+        "amount": 0.016,
+        "type": "annual"
+      },
+      {
+        "date": "2023-12-08",
+        "amount": 0.015,
+        "type": "annual"
+      }
+    ]
+  },
+  "138001": {
+    "annualYield": 1.8,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-12",
+        "amount": 0.28,
+        "type": "annual"
+      },
+      {
+        "date": "2024-12-08",
+        "amount": 0.25,
+        "type": "annual"
+      }
+    ]
+  },
+  "008007": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-18",
+        "amount": 1.63,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-12",
+        "amount": 1.63,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-12-15",
+        "amount": 1.55,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-06-08",
+        "amount": 1.55,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "164004": {
+    "annualYield": 2.0,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-22",
+        "amount": 0.22,
+        "type": "annual"
+      },
+      {
+        "date": "2024-12-18",
+        "amount": 0.2,
+        "type": "annual"
+      }
+    ]
+  },
+  "009003": {
+    "annualYield": 3.2,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.18,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-10",
+        "amount": 0.18,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-12-12",
+        "amount": 0.16,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2024-06-05",
+        "amount": 0.16,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011089": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1757,
+        "type": "annual"
+      }
+    ]
+  },
+  "011169": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1767,
+        "type": "annual"
+      }
+    ]
+  },
+  "011024": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1476,
+        "type": "annual"
+      }
+    ]
+  },
+  "011092": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4626,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3604,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3604,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011040": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4227,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4445,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4445,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011073": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4387,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2922,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2922,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "172002": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4563,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3414,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3414,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "172001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1045,
+        "type": "annual"
+      }
+    ]
+  },
+  "167005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.119,
+        "type": "annual"
+      }
+    ]
+  },
+  "133008": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4837,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3336,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3336,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "008030": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2443,
+        "type": "annual"
+      }
+    ]
+  },
+  "045015": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1548,
+        "type": "annual"
+      }
+    ]
+  },
+  "167006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1658,
+        "type": "annual"
+      }
+    ]
+  },
+  "059001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1361,
+        "type": "annual"
+      }
+    ]
+  },
+  "136003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.165,
+        "type": "annual"
+      }
+    ]
+  },
+  "135003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.191,
+        "type": "annual"
+      }
+    ]
+  },
+  "135004": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3956,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2094,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2094,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "008044": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2462,
+        "type": "annual"
+      }
+    ]
+  },
+  "008045": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2257,
+        "type": "annual"
+      }
+    ]
+  },
+  "133006": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2185,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3082,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3082,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "152004": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3815,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4399,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4399,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "041005": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4908,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3199,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3199,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "167003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1972,
+        "type": "annual"
+      }
+    ]
+  },
+  "009018": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1976,
+        "type": "annual"
+      }
+    ]
+  },
+  "011134": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2142,
+        "type": "annual"
+      }
+    ]
+  },
+  "011012": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2247,
+        "type": "annual"
+      }
+    ]
+  },
+  "011017": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2437,
+        "type": "annual"
+      }
+    ]
+  },
+  "011023": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1705,
+        "type": "annual"
+      }
+    ]
+  },
+  "011038": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1857,
+        "type": "annual"
+      }
+    ]
+  },
+  "011046": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1001,
+        "type": "annual"
+      }
+    ]
+  },
+  "009010": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3673,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3419,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3419,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "009011": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4164,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4091,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4091,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "009033": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2389,
+        "type": "annual"
+      }
+    ]
+  },
+  "011044": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1442,
+        "type": "annual"
+      }
+    ]
+  },
+  "011049": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1126,
+        "type": "annual"
+      }
+    ]
+  },
+  "011076": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1875,
+        "type": "annual"
+      }
+    ]
+  },
+  "011082": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.431,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3123,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3123,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011083": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1975,
+        "type": "annual"
+      }
+    ]
+  },
+  "153007": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2153,
+        "type": "annual"
+      }
+    ]
+  },
+  "101002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.216,
+        "type": "annual"
+      }
+    ]
+  },
+  "101004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2058,
+        "type": "annual"
+      }
+    ]
+  },
+  "101005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1998,
+        "type": "annual"
+      }
+    ]
+  },
+  "139001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1992,
+        "type": "annual"
+      }
+    ]
+  },
+  "101001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1834,
+        "type": "annual"
+      }
+    ]
+  },
+  "139006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1768,
+        "type": "annual"
+      }
+    ]
+  },
+  "139004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1132,
+        "type": "annual"
+      }
+    ]
+  },
+  "139005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.243,
+        "type": "annual"
+      }
+    ]
+  },
+  "139007": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1394,
+        "type": "annual"
+      }
+    ]
+  },
+  "139008": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2252,
+        "type": "annual"
+      }
+    ]
+  },
+  "011041": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4831,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4203,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4203,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011074": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2617,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.463,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.463,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "104001": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4172,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.317,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.317,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "104002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.198,
+        "type": "annual"
+      }
+    ]
+  },
+  "135001": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3736,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3396,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3396,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "135002": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2608,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2621,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2621,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "104004": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2335,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2423,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2423,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "167004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1228,
+        "type": "annual"
+      }
+    ]
+  },
+  "159003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1787,
+        "type": "annual"
+      }
+    ]
+  },
+  "159004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1854,
+        "type": "annual"
+      }
+    ]
+  },
+  "159006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1561,
+        "type": "annual"
+      }
+    ]
+  },
+  "167111": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2967,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4694,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4694,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "167007": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2328,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2653,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2653,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "138003": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3439,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.275,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.275,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "167008": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3661,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3906,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3906,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "009004": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2724,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2808,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2808,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "009006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1913,
+        "type": "annual"
+      }
+    ]
+  },
+  "008004": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4197,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3347,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3347,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "008003": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2706,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4941,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4941,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "164001": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4437,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4256,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4256,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "014003": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3481,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3863,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3863,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "014013": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.261,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2936,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2936,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "024001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1137,
+        "type": "annual"
+      }
+    ]
+  },
+  "024002": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4447,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4312,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4312,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "024016": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1628,
+        "type": "annual"
+      }
+    ]
+  },
+  "024017": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3597,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2394,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2394,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "024006": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2842,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3863,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3863,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "133007": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1071,
+        "type": "annual"
+      }
+    ]
+  },
+  "133009": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2422,
+        "type": "annual"
+      }
+    ]
+  },
+  "133010": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1202,
+        "type": "annual"
+      }
+    ]
+  },
+  "159002": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3362,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.284,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.284,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "167112": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4236,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4547,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4547,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "156007": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1783,
+        "type": "annual"
+      }
+    ]
+  },
+  "002002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1998,
+        "type": "annual"
+      }
+    ]
+  },
+  "012053": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3846,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2778,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2778,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012066": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1385,
+        "type": "annual"
+      }
+    ]
+  },
+  "012065": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1694,
+        "type": "annual"
+      }
+    ]
+  },
+  "012056": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1089,
+        "type": "annual"
+      }
+    ]
+  },
+  "003201": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2048,
+        "type": "annual"
+      }
+    ]
+  },
+  "001003": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.494,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4921,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4921,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012050": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3989,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.5391,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.5391,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001048": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1146,
+        "type": "annual"
+      }
+    ]
+  },
+  "001052": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1008,
+        "type": "annual"
+      }
+    ]
+  },
+  "012051": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2121,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2618,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2618,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001054": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3247,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3183,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3183,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012023": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1535,
+        "type": "annual"
+      }
+    ]
+  },
+  "001016": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2485,
+        "type": "annual"
+      }
+    ]
+  },
+  "012028": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4112,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3463,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3463,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "002004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2339,
+        "type": "annual"
+      }
+    ]
+  },
+  "012009": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1856,
+        "type": "annual"
+      }
+    ]
+  },
+  "001014": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1699,
+        "type": "annual"
+      }
+    ]
+  },
+  "177001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1132,
+        "type": "annual"
+      }
+    ]
+  },
+  "012060": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1978,
+        "type": "annual"
+      }
+    ]
+  },
+  "012059": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4049,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3748,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3748,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012021": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2265,
+        "type": "annual"
+      }
+    ]
+  },
+  "030025": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2056,
+        "type": "annual"
+      }
+    ]
+  },
+  "030026": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1943,
+        "type": "annual"
+      }
+    ]
+  },
+  "030027": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1491,
+        "type": "annual"
+      }
+    ]
+  },
+  "030024": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1692,
+        "type": "annual"
+      }
+    ]
+  },
+  "002014": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1515,
+        "type": "annual"
+      }
+    ]
+  },
+  "036001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1209,
+        "type": "annual"
+      }
+    ]
+  },
+  "012055": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3789,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.255,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.255,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012052": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2895,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3689,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3689,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012064": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2693,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.202,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.202,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "023005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1895,
+        "type": "annual"
+      }
+    ]
+  },
+  "165002": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3853,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3862,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3862,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "008042": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1284,
+        "type": "annual"
+      }
+    ]
+  },
+  "030020": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2243,
+        "type": "annual"
+      }
+    ]
+  },
+  "030005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2379,
+        "type": "annual"
+      }
+    ]
+  },
+  "030021": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.167,
+        "type": "annual"
+      }
+    ]
+  },
+  "003200": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2312,
+        "type": "annual"
+      }
+    ]
+  },
+  "003100": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2452,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.385,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.385,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "005010": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.337,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4417,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4417,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "008043": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1358,
+        "type": "annual"
+      }
+    ]
+  },
+  "030016": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1224,
+        "type": "annual"
+      }
+    ]
+  },
+  "030003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1477,
+        "type": "annual"
+      }
+    ]
+  },
+  "030017": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1988,
+        "type": "annual"
+      }
+    ]
+  },
+  "008001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1903,
+        "type": "annual"
+      }
+    ]
+  },
+  "030006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.183,
+        "type": "annual"
+      }
+    ]
+  },
+  "030023": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1835,
+        "type": "annual"
+      }
+    ]
+  },
+  "030004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1324,
+        "type": "annual"
+      }
+    ]
+  },
+  "030019": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2147,
+        "type": "annual"
+      }
+    ]
+  },
+  "030028": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2468,
+        "type": "annual"
+      }
+    ]
+  },
+  "030001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1851,
+        "type": "annual"
+      }
+    ]
+  },
+  "030029": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1983,
+        "type": "annual"
+      }
+    ]
+  },
+  "136004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1737,
+        "type": "annual"
+      }
+    ]
+  },
+  "012001": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3308,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4253,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4253,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012054": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2694,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3741,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3741,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012013": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4092,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4657,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4657,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012058": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3491,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2894,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2894,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "478001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1456,
+        "type": "annual"
+      }
+    ]
+  },
+  "478002": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3198,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3712,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3712,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "006015": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3738,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4548,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4548,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "014014": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2048,
+        "type": "annual"
+      }
+    ]
+  },
+  "158024": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1354,
+        "type": "annual"
+      }
+    ]
+  },
+  "158006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1848,
+        "type": "annual"
+      }
+    ]
+  },
+  "158003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1107,
+        "type": "annual"
+      }
+    ]
+  },
+  "030031": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.244,
+        "type": "annual"
+      }
+    ]
+  },
+  "030032": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2298,
+        "type": "annual"
+      }
+    ]
+  },
+  "102005": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4158,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4262,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4262,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "158012": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2322,
+        "type": "annual"
+      }
+    ]
+  },
+  "158022": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.174,
+        "type": "annual"
+      }
+    ]
+  },
+  "158009": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2367,
+        "type": "annual"
+      }
+    ]
+  },
+  "158010": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1204,
+        "type": "annual"
+      }
+    ]
+  },
+  "030033": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1094,
+        "type": "annual"
+      }
+    ]
+  },
+  "030034": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1942,
+        "type": "annual"
+      }
+    ]
+  },
+  "012062": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3283,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3649,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3649,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "002013": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3707,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.403,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.403,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "014008": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3216,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2042,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2042,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "014012": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2481,
+        "type": "annual"
+      }
+    ]
+  },
+  "014001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1261,
+        "type": "annual"
+      }
+    ]
+  },
+  "014016": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2955,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.5145,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.5145,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "506002": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2908,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3154,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3154,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "026008": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4412,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3741,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3741,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "154003": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4055,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4198,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4198,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "004003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1536,
+        "type": "annual"
+      }
+    ]
+  },
+  "011170": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1642,
+        "type": "annual"
+      }
+    ]
+  },
+  "045002": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3977,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.294,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.294,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "002003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1546,
+        "type": "annual"
+      }
+    ]
+  },
+  "030018": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4997,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3388,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3388,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001020": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3379,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4847,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4847,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001058": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2631,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4215,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4215,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "006014": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3002,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4322,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4322,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "158017": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1979,
+        "type": "annual"
+      }
+    ]
+  },
+  "158016": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1328,
+        "type": "annual"
+      }
+    ]
+  },
+  "158018": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2039,
+        "type": "annual"
+      }
+    ]
+  },
+  "158019": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1582,
+        "type": "annual"
+      }
+    ]
+  },
+  "001001": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.443,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4827,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4827,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "045013": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1329,
+        "type": "annual"
+      }
+    ]
+  },
+  "014009": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3178,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2989,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2989,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "008002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.115,
+        "type": "annual"
+      }
+    ]
+  },
+  "158020": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1181,
+        "type": "annual"
+      }
+    ]
+  },
+  "158021": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1655,
+        "type": "annual"
+      }
+    ]
+  },
+  "026002": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3108,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4995,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4995,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "026009": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3436,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3478,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3478,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "005012": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3068,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2682,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2682,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "005016": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4763,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4946,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4946,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "004017": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1163,
+        "type": "annual"
+      }
+    ]
+  },
+  "137005": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4848,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2891,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2891,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "014015": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1521,
+        "type": "annual"
+      }
+    ]
+  },
+  "014010": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3456,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.554,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.554,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "045012": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3305,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3125,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3125,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012061": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2192,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2681,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2681,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "157002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1882,
+        "type": "annual"
+      }
+    ]
+  },
+  "157006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1333,
+        "type": "annual"
+      }
+    ]
+  },
+  "157003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1522,
+        "type": "annual"
+      }
+    ]
+  },
+  "157005": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4862,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3156,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3156,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "157007": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1901,
+        "type": "annual"
+      }
+    ]
+  },
+  "157009": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1055,
+        "type": "annual"
+      }
+    ]
+  },
+  "157008": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1398,
+        "type": "annual"
+      }
+    ]
+  },
+  "003219": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2371,
+        "type": "annual"
+      }
+    ]
+  },
+  "012012": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3746,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3277,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3277,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "002008": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2429,
+        "type": "annual"
+      }
+    ]
+  },
+  "002009": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2034,
+        "type": "annual"
+      }
+    ]
+  },
+  "012048": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4601,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3907,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3907,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012049": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3328,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.5963,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.5963,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "006036": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.167,
+        "type": "annual"
+      }
+    ]
+  },
+  "008041": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2107,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3826,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3826,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "003217": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3385,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3362,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3362,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "003214": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1967,
+        "type": "annual"
+      }
+    ]
+  },
+  "002001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1584,
+        "type": "annual"
+      }
+    ]
+  },
+  "026007": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2528,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4085,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4085,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001027": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1305,
+        "type": "annual"
+      }
+    ]
+  },
+  "012057": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1978,
+        "type": "annual"
+      }
+    ]
+  },
+  "001025": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1662,
+        "type": "annual"
+      }
+    ]
+  },
+  "012069": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.5216,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3217,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3217,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012027": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2602,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2607,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2607,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001051": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1503,
+        "type": "annual"
+      }
+    ]
+  },
+  "012038": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3656,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3904,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3904,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012070": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.149,
+        "type": "annual"
+      }
+    ]
+  },
+  "012010": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1542,
+        "type": "annual"
+      }
+    ]
+  },
+  "002005": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.359,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4887,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4887,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "041001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2407,
+        "type": "annual"
+      }
+    ]
+  },
+  "041003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1298,
+        "type": "annual"
+      }
+    ]
+  },
+  "041004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.207,
+        "type": "annual"
+      }
+    ]
+  },
+  "012068": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2851,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2119,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2119,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "002010": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.189,
+        "type": "annual"
+      }
+    ]
+  },
+  "012047": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2327,
+        "type": "annual"
+      }
+    ]
+  },
+  "012002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1429,
+        "type": "annual"
+      }
+    ]
+  },
+  "012044": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1808,
+        "type": "annual"
+      }
+    ]
+  },
+  "006037": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3333,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2517,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2517,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "158005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.247,
+        "type": "annual"
+      }
+    ]
+  },
+  "158002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2305,
+        "type": "annual"
+      }
+    ]
+  },
+  "158023": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1657,
+        "type": "annual"
+      }
+    ]
+  },
+  "046786": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1418,
+        "type": "annual"
+      }
+    ]
+  },
+  "008040": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1684,
+        "type": "annual"
+      }
+    ]
+  },
+  "008020": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1079,
+        "type": "annual"
+      }
+    ]
+  },
+  "014017": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2234,
+        "type": "annual"
+      }
+    ]
+  },
+  "001015": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3854,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2822,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2822,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012067": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1354,
+        "type": "annual"
+      }
+    ]
+  },
+  "012063": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4335,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4314,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4314,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "004001": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3474,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4096,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4096,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "004009": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.331,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4012,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4012,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "009025": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2044,
+        "type": "annual"
+      }
+    ]
+  },
+  "009044": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1447,
+        "type": "annual"
+      }
+    ]
+  },
+  "011055": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1501,
+        "type": "annual"
+      }
+    ]
+  },
+  "011057": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1307,
+        "type": "annual"
+      }
+    ]
+  },
+  "011162": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3109,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2565,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2565,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "009038": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1409,
+        "type": "annual"
+      }
+    ]
+  },
+  "011056": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.129,
+        "type": "annual"
+      }
+    ]
+  },
+  "011097": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.359,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3996,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3996,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011099": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3757,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4295,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4295,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011163": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3572,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.253,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.253,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011164": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2002,
+        "type": "annual"
+      }
+    ]
+  },
+  "011166": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2455,
+        "type": "annual"
+      }
+    ]
+  },
+  "030022": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3965,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.5003,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.5003,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "163001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2343,
+        "type": "annual"
+      }
+    ]
+  },
+  "003225": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1711,
+        "type": "annual"
+      }
+    ]
+  },
+  "154006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1448,
+        "type": "annual"
+      }
+    ]
+  },
+  "001033": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1972,
+        "type": "annual"
+      }
+    ]
+  },
+  "001057": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1588,
+        "type": "annual"
+      }
+    ]
+  },
+  "001043": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2593,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4882,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4882,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001031": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2259,
+        "type": "annual"
+      }
+    ]
+  },
+  "177002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2013,
+        "type": "annual"
+      }
+    ]
+  },
+  "030030": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2006,
+        "type": "annual"
+      }
+    ]
+  },
+  "006027": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1717,
+        "type": "annual"
+      }
+    ]
+  },
+  "026006": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1542,
+        "type": "annual"
+      }
+    ]
+  },
+  "001030": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4581,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4757,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4757,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001060": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2993,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2194,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2194,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "154004": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2141,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.371,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.371,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "154007": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3009,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2138,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2138,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "005011": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2158,
+        "type": "annual"
+      }
+    ]
+  },
+  "005033": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.172,
+        "type": "annual"
+      }
+    ]
+  },
+  "005022": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1001,
+        "type": "annual"
+      }
+    ]
+  },
+  "005020": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2481,
+        "type": "annual"
+      }
+    ]
+  },
+  "005028": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3874,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2613,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2613,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "005032": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1253,
+        "type": "annual"
+      }
+    ]
+  },
+  "005024": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2257,
+        "type": "annual"
+      }
+    ]
+  },
+  "005029": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.143,
+        "type": "annual"
+      }
+    ]
+  },
+  "001056": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.184,
+        "type": "annual"
+      }
+    ]
+  },
+  "003215": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3837,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3728,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3728,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "154005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.246,
+        "type": "annual"
+      }
+    ]
+  },
+  "002011": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3306,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3178,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3178,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001042": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1204,
+        "type": "annual"
+      }
+    ]
+  },
+  "001041": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1823,
+        "type": "annual"
+      }
+    ]
+  },
+  "001040": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1421,
+        "type": "annual"
+      }
+    ]
+  },
+  "001059": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3391,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2366,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2366,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "006021": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.237,
+        "type": "annual"
+      }
+    ]
+  },
+  "001032": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.245,
+        "type": "annual"
+      }
+    ]
+  },
+  "045001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1645,
+        "type": "annual"
+      }
+    ]
+  },
+  "006022": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1358,
+        "type": "annual"
+      }
+    ]
+  },
+  "006023": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1872,
+        "type": "annual"
+      }
+    ]
+  },
+  "006032": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.106,
+        "type": "annual"
+      }
+    ]
+  },
+  "012003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1779,
+        "type": "annual"
+      }
+    ]
+  },
+  "009027": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1839,
+        "type": "annual"
+      }
+    ]
+  },
+  "165001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2157,
+        "type": "annual"
+      }
+    ]
+  },
+  "006003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2437,
+        "type": "annual"
+      }
+    ]
+  },
+  "004004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1796,
+        "type": "annual"
+      }
+    ]
+  },
+  "157004": {
+    "annualYield": 4.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3456,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4303,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4303,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "506001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1365,
+        "type": "annual"
+      }
+    ]
+  },
+  "036002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1844,
+        "type": "annual"
+      }
+    ]
+  },
+  "102004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1141,
+        "type": "annual"
+      }
+    ]
+  },
+  "056001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2342,
+        "type": "annual"
+      }
+    ]
+  },
+  "056004": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2513,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3397,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3397,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "179002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2346,
+        "type": "annual"
+      }
+    ]
+  },
+  "179001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1025,
+        "type": "annual"
+      }
+    ]
+  },
+  "045003": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1851,
+        "type": "annual"
+      }
+    ]
+  },
+  "045016": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1693,
+        "type": "annual"
+      }
+    ]
+  },
+  "006028": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.165,
+        "type": "annual"
+      }
+    ]
+  },
+  "006020": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2341,
+        "type": "annual"
+      }
+    ]
+  },
+  "156005": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3774,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3676,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3676,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "045005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2314,
+        "type": "annual"
+      }
+    ]
+  },
+  "006026": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1221,
+        "type": "annual"
+      }
+    ]
+  },
+  "006024": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1763,
+        "type": "annual"
+      }
+    ]
+  },
+  "156001": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1319,
+        "type": "annual"
+      }
+    ]
+  },
+  "003210": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1235,
+        "type": "annual"
+      }
+    ]
+  },
+  "159005": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.117,
+        "type": "annual"
+      }
+    ]
+  },
+  "004019": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1532,
+        "type": "annual"
+      }
+    ]
+  },
+  "102010": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1179,
+        "type": "annual"
+      }
+    ]
+  },
+  "005031": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2381,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2415,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2415,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "005030": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2672,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2188,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2188,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "001019": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2156,
+        "type": "annual"
+      }
+    ]
+  },
+  "001004": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1234,
+        "type": "annual"
+      }
+    ]
+  },
+  "006038": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.241,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2581,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2581,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "004018": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.122,
+        "type": "annual"
+      }
+    ]
+  },
+  "006019": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2168,
+        "type": "annual"
+      }
+    ]
+  },
+  "006013": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2198,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2262,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2262,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "045017": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1499,
+        "type": "annual"
+      }
+    ]
+  },
+  "009045": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1433,
+        "type": "annual"
+      }
+    ]
+  },
+  "009046": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1076,
+        "type": "annual"
+      }
+    ]
+  },
+  "056003": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.2092,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.389,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.389,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "163002": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "دولار أمريكي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3775,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.3013,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.3013,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "012036": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1128,
+        "type": "annual"
+      }
+    ]
+  },
+  "011081": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.4122,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4049,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4049,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "045014": {
+    "annualYield": 3.0,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.3117,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.2833,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.2833,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "045007": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.222,
+        "type": "annual"
+      }
+    ]
+  },
+  "045010": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.21,
+        "type": "annual"
+      }
+    ]
+  },
+  "045008": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1748,
+        "type": "annual"
+      }
+    ]
+  },
+  "045011": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.225,
+        "type": "annual"
+      }
+    ]
+  },
+  "045009": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2029,
+        "type": "annual"
+      }
+    ]
+  },
+  "170170": {
+    "annualYield": 3.5,
+    "dividendsPerYear": 2,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2026-06-15",
+        "amount": 0.26,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-06-15",
+        "amount": 0.4879,
+        "type": "semi-annual"
+      },
+      {
+        "date": "2025-12-15",
+        "amount": 0.4879,
+        "type": "semi-annual"
+      }
+    ]
+  },
+  "011171": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1385,
+        "type": "annual"
+      }
+    ]
+  },
+  "102008": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2071,
+        "type": "annual"
+      }
+    ]
+  },
+  "011095": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2315,
+        "type": "annual"
+      }
+    ]
+  },
+  "009030": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.2114,
+        "type": "annual"
+      }
+    ]
+  },
+  "155002": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1297,
+        "type": "annual"
+      }
+    ]
+  },
+  "009043": {
+    "annualYield": 1.5,
+    "dividendsPerYear": 1,
+    "currency": "ريال سعودي",
+    "distributions": [
+      {
+        "date": "2025-12-15",
+        "amount": 0.1399,
+        "type": "annual"
+      }
+    ]
+  }
+}
