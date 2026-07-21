@@ -1,49 +1,49 @@
-# 📊 ETF Analyzer - محلل الصناديق المتداولة
+# ETF Analyzer
 
-تحليل شامل للصناديق المتداولة (ETFs) وصناديق الاستثمار السعودية والأمريكية مع واجهة عربية.
+A comprehensive ETF and mutual fund analysis tool with Arabic-language interface, supporting US ETFs, Saudi ETFs/REITs, and Saudi mutual funds.
 
-## المميزات
+## Features
 
-- **تحليل ETF** — معلومات، ممتلكات، قطاعات، توزيعات، مخاطر، تاريخ أسعار
-- **مقارنة** — مقارنة صندوقين جنباً لجنب مع نسبة التداخل
-- **مقارنة متعددة** — مقارنة ٣ صناديق أو أكثر
-- **الأكثر حركة** — أعلى وأقل الصناديق تغيراً
-- **الصناديق السعودية** — ١٣ ETF + ١٣ REIT سعودي
-- **صناديق الاستثمار** — ٣٥٣ صندوق استثمار سعودي مع بحث وتصفية
-- **التوزيعات** — توزيعات الـ REITs والصناديق الاستثمارية
-- **متابعة** — قائمة مراقبة، تنبيهات، محفظة استثمارية
+- **ETF Analysis** — info, holdings, sectors, dividends, risk metrics, price history
+- **Compare** — side-by-side comparison of two funds with overlap ratio
+- **Multi-Compare** — compare 3+ funds at once
+- **Market Movers** — top gainers and losers
+- **Saudi ETFs/REITs** — 13 ETFs + 13 REITs from Tadawul
+- **Mutual Funds** — 353 Saudi mutual funds with search, filter, sort, pagination
+- **Dividends** — REIT and mutual fund distribution data with annual yield
+- **Watchlist / Alerts / Portfolio** — personal tracking tools
 
-## التقنيات
+## Tech Stack
 
 - **Backend:** Python FastAPI + Yahoo Finance API
-- **Frontend:** HTML/CSS/JS (صفحة واحدة) + Chart.js
-- **Database:** SQLite (تخزين مؤقت ٢٤ ساعة)
-- **Cache:** تخزين مؤقت للبيانات لتقليل طلب Yahoo Finance
+- **Frontend:** Single-page HTML/CSS/JS + Chart.js
+- **Cache:** SQLite with 24-hour TTL
+- **Database:** JSON files for fund data, SQLite for API cache
 
-## التشغيل
+## Quick Start
 
 ```
 pip install -r backend\requirements.txt
 python run.py
 ```
 
-ثم افتح http://localhost:8000
+Open http://localhost:8000
 
-## هيكل المشروع
+## Project Structure
 
 ```
 ├── backend/
-│   ├── app.py              # FastAPI server
-│   ├── etf_data.py         # بيانات ETFs الأمريكية
-│   ├── saudi_etf.py        # بيانات ETFs والـ REITs السعودية
-│   ├── cache.py            # نظام التخزين المؤقت SQLite
-│   ├── mutual_funds.json   # ٣٥٣ صندوق استثمار سعودي
-│   ├── fund_holdings.json  # ممتلكات الصناديق الاستثمارية
-│   ├── fund_dividends.json # توزيعات الصناديق
+│   ├── app.py              # FastAPI server (routes, middleware)
+│   ├── etf_data.py         # US ETF data & Yahoo Finance integration
+│   ├── saudi_etf.py        # Saudi ETF/REIT data & holdings
+│   ├── cache.py            # SQLite caching layer
+│   ├── mutual_funds.json   # 353 Saudi mutual funds
+│   ├── fund_holdings.json  # Mutual fund holdings data
+│   ├── fund_dividends.json # Dividend distribution data
 │   └── requirements.txt
 ├── frontend/
-│   └── index.html          # صفحة واحدة شاملة
-├── run.py                  # نقطة التشغيل
-├── audit_test.py           # اختبارات التدقيق
+│   └── index.html          # Single-page Arabic UI
+├── run.py                  # Entry point
+├── audit_test.py           # QA audit tests
 └── README.md
 ```
